@@ -1,1 +1,6 @@
 /* pages/me/me.wxss */
+.container{
+  background-color: black;
+  width: auto;
+  height: 100vh;
+}

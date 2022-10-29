@@ -1,2 +1,2 @@
 <!--pages/hospital/hospital.wxml-->
-<text>pages/hospital/hospital.wxml</text>
+<view class="container"></view>
