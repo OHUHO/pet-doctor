@@ -21,8 +21,8 @@ Component({
         pagePath: "/pages/publish/publish",
         bulge:true,
         text: "发布",
-        iconPath: "/images/tabbar/dog.png",
-        selectedIconPath: "/images/tabbar/dog-selected.png"
+        iconPath: "/images/tabbar/publish.png",
+        selectedIconPath: "/images/tabbar/publish-selected.png"
       },
       {
         pagePath: "/pages/popularization/popularization",
