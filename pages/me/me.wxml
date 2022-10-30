@@ -1,2 +1,17 @@
-<!--pages/me/me.wxml-->
-<view class="container"></view>
+<!--pages/index/index.wxml-->
+<view bindtouchstart="tap">
+	<view class="head">
+		<image class='img' src="/images/cat.png"></image>
+		<view class="star head_name" catchtap="showTip">创作不易</view>
+		<view class="head_subname">期待您的关注+star~</view>
+	</view>
+
+
+</view>
+<view class="ripple" style="left:{{left}}px;top:{{top}}px;animation:{{anim}};-webkit-animation:{{anim}}"></view>
+<!-- 灯泡 -->
+<view class="war_pop">
+	<view class="box">
+		<view class="box_view"></view>
+	</view>
+</view>

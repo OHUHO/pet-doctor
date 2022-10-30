@@ -1,8 +1,8 @@
 // custom-tab-bar/index.js
 Component({
   data: {
-    color: "#515151",
-    selectedColor: "#DAA520",
+    color: "#F9A7A7",
+    selectedColor: "#226967",
     backgroundColor: "#ffffff",
     list: [
       {
