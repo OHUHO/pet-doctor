@@ -16,6 +16,7 @@ page {
   opacity: 1;
   z-index : -1;
   border-bottom-right-radius: 50px;
+  opacity: 0.8;
 }
 
 .userinfo-wrapper {
@@ -163,10 +164,12 @@ page {
   font-size: 14px;
   color: rgb(97, 95, 95);
 }
+
 .manage-img {
-  width: 30px;
-  height: 30px;
-  margin: 6px 0;
+  font-size: 64rpx;
+  color: #226967;
+  font-weight: 500;
+  margin: 8rpx 0;
 }
 
 

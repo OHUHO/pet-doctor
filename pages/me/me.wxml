@@ -62,19 +62,19 @@
 		<text class="manage-title">我的管理</text>
 		<view class="manage-items">
 			<view class="manage-item">
-				<image class="manage-img" src="/images/my-pet.png"></image>
+				<icon class="iconfont icon-xiedaichongwu manage-img"></icon>
 				<text>我的宠物</text>
 			</view>
 			<view class="manage-item">
-				<image class="manage-img" src="/images/record.png"></image>
+				<icon class="iconfont icon-jilu manage-img"></icon>
 				<text>我的问诊</text>
 			</view>
 			<view class="manage-item">
-				<image class="manage-img" src="/images/collection.png"></image>
+				<icon class="iconfont icon-shoucang1 manage-img"></icon>
 				<text>我的收藏</text>
 			</view>
 			<view class="manage-item">
-				<image class="manage-img" src="/images/publish.png"></image>
+				<icon class="iconfont icon-fabujishu manage-img"></icon>
 				<text>我的发布</text>
 			</view>
 		</view>

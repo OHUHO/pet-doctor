@@ -1,4 +1,11 @@
 /**index.wxss**/
+/* 隐藏滚动条 */
+page {
+  padding-bottom: 200rpx;
+  height: 2500rpx;
+}
+
+
 .userinfo {
   display: flex;
   flex-direction: column;

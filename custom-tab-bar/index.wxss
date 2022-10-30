@@ -1,3 +1,4 @@
+
 .tab-bar {
   position: fixed;
   bottom: 0;
@@ -9,6 +10,7 @@
   line-height: 1.2;
   padding-bottom: env(safe-area-inset-bottom);
   border-top: 1px solid #e6e6e6;
+  z-index: 9999;
 }
 
 .tab-bar-item {
@@ -36,7 +38,6 @@
   border-radius: 50%;
   border-top: 1px solid #e6e6e6;
   background-color: #FFF;
-  /* background-color: #226967; */
 }
 .bulge .image{
   position: absolute; 
@@ -47,10 +48,8 @@
 .bulge .tab-bar-view{
   position: relative;
   bottom: -14px;
-  /* margin-top: 2px; */
 }
 
 .tab-bar-item .tab-bar-view {
   font-size: 12px;
-  /* margin-top: 2px; */
 }
