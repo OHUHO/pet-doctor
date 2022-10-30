@@ -9,71 +9,164 @@ page {
   height  : 500rpx;
 }
 
-.img {
+.background-image {
   position: absolute;
   width   : 100%;
   height  : 100%;
+  opacity: 1;
   z-index : -1;
+  border-bottom-right-radius: 50px;
 }
 
-.head_name {
-  position   : absolute;
-  bottom     : 300rpx;
-  left       : 50rpx;
-  font-weight: bold;
+.userinfo-wrapper {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  text-align: center;
+}
+.userinfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  /* background-color: red; */
+}
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-introduce {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.userinfo-nickname {
+  font-weight:700;
+  font-size: larger;
+}
+.userinfo-motto {
+  font-weight: 500;
+  font-size: small;
 }
 
-.head_subname {
-  position   : absolute;
-  bottom     : 230rpx;
-  left       : 50rpx;
-  font-size  : 40rpx;
-  color      : #fff;
-  font-weight: bold;
+.otherinfo {
+  /* background-color: red; */
+  /* height: 20px; */
+  margin: 10rpx 60rpx;
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  font-weight: 500;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33.3333%;
+}
+.number {
+  font-weight: 700;
 }
 
-.down_arr {
-  width : 20rpx;
-  height: 20rpx;
+/* 宠物展示块 */
+.pets {
+  width: 100%;
 }
 
-
-.c_item {
-  width        : 710rpx;
-  background   : #FFFFFF;
-  border-radius: 20rpx;
-  margin       : 0 auto 24rpx;
-  box-sizing   : border-box;
-  padding      : 30rpx;
-  font-size    : 26rpx;
-  color        : #666;
+.pet {
+  margin: 14px 30px;
+  padding: 4px 10px;
+  border-radius: 16px;
+  /* -webkit-box-shadow: 3px 3px 10px #c5c2c2; */
+  box-shadow: 3px 3px 10px #e2e1e1;
+  height: 150rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.pet-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.pet-edit{
+  font-size: 13px;
+  color: rgb(133, 134, 134);
+}
+.pet-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.pet-introduce {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 10px;
+}
+.pet-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(97, 95, 95);
+}
+.petinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  color: rgb(97, 95, 95);
+}
+.point {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: pink;
+  margin-right: 10rpx;
 }
 
-.showMore {
-  margin-top  : 30rpx;
-  padding-left: 30rpx;
+/* 我的管理板块 */
+.manages {
+  display: flex;
+  flex-direction: column;
 }
-
-.i_item {
-  margin-bottom: 20rpx;
+.manage {
+  margin: 10px 30px;
+  /* background-color: pink; */
+  display: flex;
+  flex-direction: column;
+  
 }
-
-.show_img {
-  width     : 300rpx;
-  text-align: right;
+.manage-title{
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(97, 95, 95);
 }
-
-
-.star {
-  width           : 300rpx;
-  color           : #fff;
-  background-color: #f3d5da;
-  animation       : scale 5s ease-in-out infinite;
-  height          : 80rpx;
-  line-height     : 80rpx;
-  text-align      : center;
-  border-radius   : 40rpx;
-  box-shadow      : 0 8rpx 16rpx 0 rgba(0, 0, 0, 0.2), 0 6rpx 20rpx 0 rgba(0, 0, 0, 0.19);
+.manage-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0px;
+}
+.manage-item {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  font-size: 14px;
+  color: rgb(97, 95, 95);
+}
+.manage-img {
+  width: 30px;
+  height: 30px;
+  margin: 6px 0;
 }
 
 
@@ -87,25 +180,6 @@ page {
   25%,
   75% {
     transform: scale(1.1);
-  }
-}
-
-
-.ripple {
-  background-color: #ceebaa;
-  border-radius   : 50%;
-  height          : 20px;
-  width           : 20px;
-  margin-top      : -90px;
-  position        : absolute;
-  transform       : scale(0);
-}
-
-@keyframes ripple {
-  100% {
-    -webkit-transform: scale(12);
-    transform        : scale(12);
-    background-color : transparent;
   }
 }
 
@@ -200,43 +274,4 @@ page {
   100% {
     transform: rotate(-10deg)
   }
-}
-
-.fix_btn {
-  width   : 100rpx;
-  height  : 100rpx;
-  position: fixed;
-  z-index : 10;
-  bottom  : 220rpx;
-  right   : 20rpx;
-}
-
-
-.icon {
-  width        : 100%;
-  height       : 100%;
-  border-radius: 50%;
-}
-
-.total {
-  font-size      : 30rpx;
-  font-weight    : bold;
-  position       : relative;
-  margin-top     : 30rpx;
-  color          : pink;
-  display        : flex;
-  justify-content: flex-end;
-}
-
-.total::after {
-  content    : attr(data-text);
-  position   : absolute;
-  display    : inline-block;
-  bottom     : -0.7rem;
-  right      : 0.5rem;
-  opacity    : 0.2;
-  z-index    : 0;
-  text-align : right;
-  font-weight: 900;
-  font-size  : 30rpx;
 }
