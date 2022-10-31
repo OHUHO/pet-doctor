@@ -9,7 +9,7 @@
 				</view>
 				<view class="userinfo-introduce">
 					<open-data type="userNickName" class="userinfo-nickname"></open-data>
-					<text class="userinfo-motto">今天也要好好干饭</text>
+					<text class="userinfo-motto">致力于宠物健康</text>
 				</view>
 				
 			</block>
@@ -20,7 +20,7 @@
 				<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
 				<view class="userinfo-introduce">
 					<text class="userinfo-nickname">{{userInfo.nickName}}</text>
-					<text class="userinfo-motto">今天也要好好干饭</text>
+					<text class="userinfo-motto">致力于宠物健康</text>
 				</view>
 			</block>
 		</view>

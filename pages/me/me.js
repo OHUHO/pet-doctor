@@ -7,7 +7,7 @@ Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
+    // canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
     petList:[
       {img:'/images/pets/3.png',name:'南瓜',info1:'波斯猫',info2:'已绝育',info3:'相伴520天',},
       {img:'/images/pets/2.png',name:'泡芙',info1:'波斯猫',info2:'已绝育',info3:'相伴520天',},
