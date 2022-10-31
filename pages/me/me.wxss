@@ -62,6 +62,7 @@ page {
   flex-direction: row;
   color: #ffffff;
   font-weight: 500;
+  /* color: #f8d3d3; */
 }
 .col {
   display: flex;

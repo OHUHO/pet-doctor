@@ -15,3 +15,5 @@
 		<text class="userinfo-nickname">{{userInfo.nickName}}</text>
 	</block>
 </view>
+
+<button bindtap="clickMe">click 我</button> 

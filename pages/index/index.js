@@ -44,6 +44,11 @@ Page({
       hasUserInfo: true
     })
   },
+  clickMe(){
+    wx.navigateTo({
+      url: '/pages/logs/logs',
+    })
+  },
 
 
 
