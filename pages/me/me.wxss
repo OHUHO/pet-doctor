@@ -136,13 +136,13 @@ page {
 .manages {
   display: flex;
   flex-direction: column;
+  margin-top: 50rpx;
 }
 .manage {
   margin: 10px 30px;
   /* background-color: pink; */
   display: flex;
   flex-direction: column;
-  
 }
 .manage-title{
   font-weight: 600;
@@ -153,7 +153,7 @@ page {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 10px 0px;
+  margin: 10rpx 0px;
 }
 .manage-item {
   display:flex;
