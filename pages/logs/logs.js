@@ -5,6 +5,10 @@ Page({
     animationData:{},//
   },
 
+  onLoad(){
+    this.showModal()
+  },
+
 // 显示遮罩层
   showModal: function () {
   var that=this;
@@ -12,7 +16,7 @@ Page({
     hideModal:false
   })
   var animation = wx.createAnimation({
-    duration: 200,//动画的持续时间 默认400ms   数值越大，动画越慢   数值越小，动画越快
+    duration: 600,//动画的持续时间 默认400ms   数值越大，动画越慢   数值越小，动画越快
     timingFunction: 'ease',//动画的效果 默认值是linear
   })
   this.animation = animation 
@@ -25,7 +29,7 @@ Page({
 hideModal: function () {
   var that=this; 
   var animation = wx.createAnimation({
-    duration: 800,//动画的持续时间 默认400ms   数值越大，动画越慢   数值越小，动画越快
+    duration: 600,//动画的持续时间 默认400ms   数值越大，动画越慢   数值越小，动画越快
     timingFunction: 'ease',//动画的效果 默认值是linear
   })
   this.animation = animation

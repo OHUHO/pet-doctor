@@ -1,9 +1,11 @@
 // custom-tab-bar/index.js
 Component({
   data: {
+    selected:0,
     color: "#F9A7A7",
     selectedColor: "#226967",
     backgroundColor: "#ffffff",
+    show: true,
     list: [
       {
         pagePath: "/pages/index/index",
@@ -16,13 +18,6 @@ Component({
         text: "医院",
         iconPath: "/images/tabbar/hospital.png",
         selectedIconPath: "/images/tabbar/hospital-selected.png"
-      },
-      {
-        pagePath: "/pages/publish/publish",
-        bulge:true,
-        text: "发布",
-        iconPath: "/images/tabbar/publish.png",
-        selectedIconPath: "/images/tabbar/publish-selected.png"
       },
       {
         pagePath: "/pages/popularization/popularization",
@@ -44,7 +39,22 @@ Component({
     switchTab(e) {
       const data = e.currentTarget.dataset
       const url = data.path
-      wx.switchTab({url}) 
+      wx.switchTab({
+        url,
+        success: (res) => {
+          let page = getCurrentPages().pop();
+          if (page == undefined || page == null) return;
+          page.onLoad()
+        }
+      })
+      this.setData({
+        selected: data.index
+      })
+    },
+    publish(){
+      wx.navigateTo({
+        url: '/pages/logs/logs',
+      })
     }
-  }
+  },
 })

@@ -30,10 +30,6 @@
         "text": "医院"
       },
       {
-        "pagePath": "pages/publish/publish",
-        "text": "item3"
-      },
-      {
         "pagePath": "pages/popularization/popularization",
         "text": "科普"
       },

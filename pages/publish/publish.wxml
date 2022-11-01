@@ -1,5 +1,11 @@
 <!--pages/publish/publish.wxml-->
-<view class="header"></view>
+<view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
+    <view class="modals-cancel" bindtap="hideModal"></view>
+    <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}"></view>
+</view>
+
+
+<!-- <view class="header"></view>
 
 <view class="con">
   <text class="title">上传照片</text>
@@ -14,4 +20,4 @@
       <image src="/images/add.png" class="add-img" mode="aspectFill"></image>
     </view>
   </view>
-</view>
+</view> -->
