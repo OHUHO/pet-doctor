@@ -1,7 +1,7 @@
 // custom-tab-bar/index.js
 Component({
   data: {
-    selected:0,
+    selected: 0,
     color: "#F9A7A7",
     selectedColor: "#226967",
     backgroundColor: "#ffffff",
@@ -31,8 +31,10 @@ Component({
         iconPath: "/images/tabbar/me.png",
         selectedIconPath: "/images/tabbar/me-selected.png"
       },
-    ]
+    ],
+
   },
+
   attached() {
   },
   methods: {
@@ -51,10 +53,23 @@ Component({
         selected: data.index
       })
     },
-    publish(){
-      wx.navigateTo({
-        url: '/pages/publish/publish',
-      })
-    }
+    publish() {
+      // wx.navigateTo({
+      //   url: '/pages/publish/publish',
+      // })
+      // 直接显示弹窗
+      // this.showModal()
+
+      // 隐藏 tabBar
+      // this.setData({
+      //   show: false
+      // })
+
+      // 调用组件中的方法显示弹窗
+      this.selectComponent("#publishElement").showModal()
+    
+    },
+
+
   },
 })

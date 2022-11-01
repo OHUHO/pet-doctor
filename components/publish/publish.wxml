@@ -1,8 +1,8 @@
-<!--pages/publish/publish.wxml-->
+<!--components/publish/publish.wxml-->
 <view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
     <view class="modals-cancel" bindtap="hideModal"></view>
     <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
-
+      <button style="height:400rpx;" bindtap="hideModal">点我</button>
       <view class="box">
         <view class="header"></view>  
         <!-- 文字区域 -->
@@ -23,4 +23,3 @@
       
     </view>
 </view>
-

@@ -1,0 +1,131 @@
+/* components/publish/publish.wxss */
+
+/* -------------下面是弹出框的样式---------------- */
+/*模态框*/
+.modals {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.modals-cancel {
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+.bottom-dialog-body {
+	position: absolute;
+	z-index: 10001;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	/* padding: 30rpx; */
+	/* height: 1000rpx; */
+	height: 100%;
+	background-color: #fff;
+	/* background-color: aqua; */
+}
+
+/*动画前初始位置*/
+.bottom-pos {
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+}
+
+/* -------------下面是弹出框中的内容样式（box）---------------- */
+.box {
+	width: 100%;
+	height: 100%;
+	/* height: 4000px; */
+	background-color: rgb(144, 141, 141);
+	display: flex;
+	flex-direction: column;
+	/* background-color: aquamarine; */
+}
+
+/* .header {
+	width: 100%;
+	height: 100rpx;
+	z-index: 999;
+  }
+  
+  .header::after {
+	content: '';
+	width: 140%;
+	height: 100rpx;
+	position: absolute;
+	left: -20%;
+	border-radius: 0 0 90% 90%;
+	background: #F9A7A7;
+  } */
+
+/* 文本区域 */
+.textarea {
+	margin: 50rpx 20rpx;
+	width: calc(100% - 40rpx);
+	/* border: 2px solid rebeccapurple; */
+	font-size: 34rpx;
+	line-height: 1.4rem;
+	height: 300rpx;
+	/* background-color: green; */
+}
+
+
+/* 图片区域 */
+.images {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 24rpx 25.999999rpx;
+	margin-top: 0;
+}
+
+.image {
+	width: 220rpx;
+	height: 220rpx;
+	margin-right: 20rpx;
+	margin-bottom: 20rpx;
+	position: relative;
+}
+
+.img-item {
+	width: 220rpx;
+	height: 220rpx;
+}
+
+.image:nth-child(3n) {
+	margin-right: 0;
+}
+
+.item-img1 {
+	width: 216rpx;
+	height: 216rpx;
+	margin-bottom: 20rpx;
+	border: 1rpx solid #ccc;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.add-img {
+	width: 60rpx;
+	height: 60rpx;
+}
+
+.close {
+	width: 30rpx;
+	height: 30rpx;
+	position: absolute;
+	top: -15rpx;
+	right: -15rpx;
+}

@@ -4,8 +4,7 @@
     "custom-tab-bar/index",
     "pages/me/me",
     "pages/hospital/hospital",
-    "pages/popularization/popularization",
-    "pages/publish/publish"
+    "pages/popularization/popularization"
   ],
   "window": {
     "backgroundTextStyle": "light",
