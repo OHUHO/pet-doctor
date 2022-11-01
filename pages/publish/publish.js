@@ -12,8 +12,7 @@ Page({
     show: true,//显示选择图片的按钮
     imgList: [
       'https://i.postimg.cc/Bn1XpkSn/susu.jpg', 'https://i.postimg.cc/Gm7KjGmN/111.jpg', 'https://i.postimg.cc/Bv28vfkg/222.webp',
-      'https://i.postimg.cc/65STLQNc/333.webp', 'https://i.postimg.cc/Bn1XpkSn/susu.jpg', 'https://i.postimg.cc/Bn1XpkSn/susu.jpg',
-      'https://i.postimg.cc/Bn1XpkSn/susu.jpg',
+      'https://i.postimg.cc/65STLQNc/333.webp', 
     ],
     maxPhoto: 9,//最大上传9张图片，
   },
@@ -25,7 +24,7 @@ Page({
       hideModal:false
     })
     var animation = wx.createAnimation({
-      duration: 200,//动画的持续时间 默认400ms   数值越大，动画越慢   数值越小，动画越快
+      duration: 300,//动画的持续时间 默认400ms   数值越大，动画越慢   数值越小，动画越快
       timingFunction: 'ease',//动画的效果 默认值是linear
     })
     this.animation = animation 
@@ -38,7 +37,7 @@ Page({
   hideModal: function () {
     var that=this; 
     var animation = wx.createAnimation({
-      duration: 200,//动画的持续时间 默认400ms   数值越大，动画越慢   数值越小，动画越快
+      duration: 300,//动画的持续时间 默认400ms   数值越大，动画越慢   数值越小，动画越快
       timingFunction: 'ease',//动画的效果 默认值是linear
     })
     this.animation = animation

@@ -5,26 +5,27 @@
 
       <view class="box">
         <view class="header"></view>  
+        <!-- 文字区域 -->
+        <view class="content">
+          
+        </view>
+        <!-- 图片区域 -->
+        <view class="">
+          <view class="flex-row img-list">
+            <block wx:for="{{imgList}}" wx:key="index">
+              <view class="item-img"> 
+                <image src="{{item}}" class="img-item" mode="aspectFill" catchtap="previewImg"  data-src="{{item}}" ></image>
+                <image src="/images/close1.png" class="close" catchtap="deleteUpload" data-index="{{index}} "></image>
+              </view>
+            </block>
+            <view class="item-img1 flex-column" catchtap="chooseImg"  wx:if="{{show}}">
+              <image src="/images/add.png" class="add-img" mode="aspectFill"></image>
+            </view>
+          </view>
+        </view>
+
       </view>
       
-  
     </view>
 </view>
 
-
-<!-- <view class="header"></view>
-
-<view class="con">
-  <text class="title">上传照片</text>
-  <view class="flex-row img-list">
-    <block wx:for="{{imgList}}" wx:key="index">
-      <view class="item-img"> 
-        <image src="{{item}}" class="img-item" mode="aspectFill" catchtap="previewImg"  data-src="{{item}}" ></image>
-        <image src="/images/close1.png" class="close" catchtap="deleteUpload" data-index="{{index}} "></image>
-      </view>
-    </block>
-    <view class="item-img1 flex-column" catchtap="chooseImg"  wx:if="{{show}}">
-      <image src="/images/add.png" class="add-img" mode="aspectFill"></image>
-    </view>
-  </view>
-</view> -->

@@ -3,7 +3,7 @@ page {
   background: #fff;
 }
 
-/* ----------------------------- */
+/* -------------下面是弹出框的样式---------------- */
 /*模态框*/
 .modals {
   position: fixed;
@@ -43,60 +43,63 @@ page {
   transform: translateY(100%);
 }
 
-/* ----------------------------- */
-.box{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  
-}
-/* .header{
-  width: 100%;
-  height: 150rpx;
-  background-color: #F9A7A7;
-  border-radius: 0 0 50% 50%;
-
-} */
+/* -------------下面是弹出框中的内容样式（box）---------------- */
 
 .header {
   width: 100%;
-  height: 240rpx;
-  position: relative;
-  z-index: -1;
-  overflow: hidden;
+  height: 100rpx;
+  /* position: relative; */
+  /* z-index: -1; */
+  /* overflow: hidden; */
 }
 
 .header::after {
   content: '';
   width: 140%;
-  height: 240rpx;
+  height: 100rpx;
   position: absolute;
-  z-index: -1;
+  /* z-index: -1; */
   left: -20%;
-  top: 0;
+  /* top: 0; */
   border-radius: 0 0 90% 90%;
   background: #F9A7A7;
 }
-
-
-/* con */
-.con {
-  margin: 0 20rpx;
+/* 文本区域 */
+.content {
+  background-color: purple;
+  width: 100%;
+  height: 200rpx;
 }
-
-.title {
-  padding-left: 31rpx;
-  font-size: 28rpx;
-  font-weight: bold;
-  color: #333333;
-}
-
+/* .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 500rpx;
+  background-color: #a1e246;
+} */
 .flex-row {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
+/* 文本区域 */
+.content-area {
+  background-color: red;
+  width: 100%;
+  height: 500rpx;
+}
+
+/* .title {
+  padding-left: 31rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333333;
+} */
+
+
 .flex-column {
   display: flex;
   flex-direction: column;
