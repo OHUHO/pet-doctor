@@ -68,34 +68,10 @@ Page({
   // ---------------------------------------------------------------------------
 
   onLoad(){
-    // 隐藏 tabBar
-    // this.getTabBar().setData({
-    //   show: false
-    // })
-    // // 触发底部弹出框动画
-    // this.showModal()
-    wx.navigateTo({
-      url: '/pages/logs/logs',
-    })
+   // 触发底部弹出框动画
+    this.showModal()
+  
   },
-  onUnload(){
-    this.getTabBar().setData({
-      show: true
-    })
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
-      this.getTabBar().setData({
-        selected: 2
-      })
-    }
-    
-  },
-
 
   /**
    * 选择上传方式

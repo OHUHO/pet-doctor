@@ -53,7 +53,7 @@ Component({
     },
     publish(){
       wx.navigateTo({
-        url: '/pages/logs/logs',
+        url: '/pages/publish/publish',
       })
     }
   },

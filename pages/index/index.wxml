@@ -16,4 +16,3 @@
 	</block>
 </view>
 
-<button bindtap="clickMe">click 我</button> 

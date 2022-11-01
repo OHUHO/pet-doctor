@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
     "custom-tab-bar/index",
     "pages/me/me",
     "pages/hospital/hospital",
