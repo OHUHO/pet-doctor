@@ -6,9 +6,7 @@
       <view class="box">
         <view class="header"></view>  
         <!-- 文字区域 -->
-        <view class="content">
-          
-        </view>
+        <textarea class="textarea" placeholder=" [想法]，让更多的人看到你的想法或问题" maxlength="225"></textarea>
         <!-- 图片区域 -->
         <view class="images">
           <block wx:for="{{imgList}}" wx:key="index">
@@ -21,7 +19,6 @@
             <image src="/images/add.png" class="add-img" mode="aspectFill"></image>
           </view>
         </view>
-
       </view>
       
     </view>

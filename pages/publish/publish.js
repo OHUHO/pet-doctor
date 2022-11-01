@@ -8,11 +8,12 @@ Page({
     hideModal:true, //模态框的状态  true-隐藏  false-显示
     animationData:{},//
 
+    currentInput:'',
 
     show: true,//显示选择图片的按钮
     imgList: [
-      'https://i.postimg.cc/Bn1XpkSn/susu.jpg', 'https://i.postimg.cc/Gm7KjGmN/111.jpg', 'https://i.postimg.cc/Bv28vfkg/222.webp',
-      'https://i.postimg.cc/65STLQNc/333.webp', 
+      // 'https://i.postimg.cc/Bn1XpkSn/susu.jpg', 'https://i.postimg.cc/Gm7KjGmN/111.jpg', 'https://i.postimg.cc/Bv28vfkg/222.webp',
+      // 'https://i.postimg.cc/65STLQNc/333.webp', 
     ],
     maxPhoto: 9,//最大上传9张图片，
   },
@@ -70,6 +71,12 @@ Page({
    // 触发底部弹出框动画
     this.showModal()
   
+  },
+
+  getInput(e){
+    this.setData({
+      currentInput: e.detail.value
+    })
   },
 
   /**
