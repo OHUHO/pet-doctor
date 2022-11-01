@@ -44,7 +44,9 @@ page {
 }
 
 /* -------------下面是弹出框中的内容样式（box）---------------- */
-
+.box {
+  width: 100%;
+}
 .header {
   width: 100%;
   height: 100rpx;
@@ -66,58 +68,28 @@ page {
 }
 /* 文本区域 */
 .content {
-  background-color: purple;
+  /* background-color: purple; */
   width: 100%;
   height: 200rpx;
 }
-/* .content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 500rpx;
-  background-color: #a1e246;
-} */
-.flex-row {
+
+
+
+/* 图片区域 */
+.images {
   display: flex;
   flex-direction: row;
-  align-items: center;
-}
-
-/* 文本区域 */
-.content-area {
-  background-color: red;
-  width: 100%;
-  height: 500rpx;
-}
-
-/* .title {
-  padding-left: 31rpx;
-  font-size: 28rpx;
-  font-weight: bold;
-  color: #333333;
-} */
-
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.img-list {
   flex-wrap: wrap;
-  margin-top: 24rpx;
+  align-items: center;
+  margin: 24rpx 25.999999rpx;
 }
 
-.item-img {
+.image {
   width: 220rpx;
   height: 220rpx;
-  margin-right: 23rpx;
-  margin-bottom: 23rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
   position: relative;
-  /* border: 1px solid #ccc; */
 }
 
 .img-item {
@@ -125,22 +97,19 @@ page {
   height: 220rpx;
 }
 
-.item-img:nth-child(3n) {
+.image:nth-child(3n) {
   margin-right: 0;
 }
 
 .item-img1 {
   width: 220rpx;
   height: 220rpx;
-  margin-bottom: 23rpx;
+  margin-bottom: 20rpx;
   border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-}
-
-.item-img1 text {
-  font-size: 26rpx;
-  /* font-weight: bold; */
-  color: #999999;
 }
 
 .add-img {
