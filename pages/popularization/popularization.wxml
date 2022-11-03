@@ -1,4 +1,4 @@
 <!--pages/popularization/popularization.wxml-->
-<view class="container">
-  
+<view style='margin-top: {{height*2+20}}rpx'> 
+    <search-component></search-component>
 </view>

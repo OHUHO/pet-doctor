@@ -1,5 +1,10 @@
 // app.js
 App({
+
+  globalData:{
+    height: 0,
+    
+  },
   onLaunch() {
     // 展示本地存储能力
     const logs = wx.getStorageSync('logs') || []
@@ -10,6 +15,14 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+      }
+    })
+
+    //自定义顶部搜索必须设置
+    // 启动应用时获取height
+    wx.getSystemInfo({
+      success: (res) => {
+        this.globalData.height = res.statusBarHeight
       }
     })
 
