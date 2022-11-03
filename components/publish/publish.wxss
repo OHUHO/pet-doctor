@@ -27,6 +27,7 @@
 	-webkit-transform: translateY(100%);
 	transform: translateY(100%);
 }
+
 /* .bottom-dialog-body {
 	position: absolute;
 	z-index: 10001;
@@ -50,12 +51,13 @@
 
 /* -------------下面是弹出框中的内容样式（box）---------------- */
 /* 关闭按钮 */
-.close-dialog{
+.close-dialog {
 	color: rgb(124, 124, 124);
 	font-size: 60rpx;
 	font-weight: 300;
 	position: absolute;
 	bottom: 100rpx;
+	cursor: pointer;
 }
 
 .box {
@@ -63,15 +65,16 @@
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+	/* background-color: rebeccapurple; */
 }
 
 /* .header {
 	width: 100%;
 	height: 100rpx;
 	z-index: 999;
-  }
-  
-  .header::after {
+}
+
+.header::after {
 	content: '';
 	width: 140%;
 	height: 100rpx;
@@ -79,7 +82,7 @@
 	left: -20%;
 	border-radius: 0 0 90% 90%;
 	background: #F9A7A7;
-  } */
+} */
 
 /* 文本区域 */
 .textarea {

@@ -36,13 +36,13 @@ Component({
 				hideModal: false
 			})
 			var animation = wx.createAnimation({
-				duration: 300,//动画的持续时间 默认400ms   数值越大，动画越慢   数值越小，动画越快
+				duration: 400,//动画的持续时间 默认400ms   数值越大，动画越慢   数值越小，动画越快
 				timingFunction: 'ease',//动画的效果 默认值是linear
 			})
 			this.animation = animation
 			setTimeout(function () {
 				that.fadeIn();//调用显示动画
-			}, 200)
+			}, 300)
 
 			// 隐藏 tabBar
 			this.getTabBar().setData({
@@ -54,7 +54,7 @@ Component({
 		hideModal: function () {
 			var that = this;
 			var animation = wx.createAnimation({
-				duration: 500,//动画的持续时间 默认400ms   数值越大，动画越慢   数值越小，动画越快
+				duration: 400,//动画的持续时间 默认400ms   数值越大，动画越慢   数值越小，动画越快
 				timingFunction: 'ease',//动画的效果 默认值是linear
 			})
 			this.animation = animation
