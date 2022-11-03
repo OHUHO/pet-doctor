@@ -1,1 +1,84 @@
 /* pages/popularization/popularization.wxss */
+
+/* .custom-tabs {
+    margin-bottom: 32rpx;
+    --td-tab-track-width:50rpx
+}
+.custom-tabs t-tabs{
+    text-align: left;
+}
+
+.custom-tabs t-tab-panel {
+    text-align: center;
+    line-height: 172rpx;
+    background-color: yellow;
+    
+} */
+
+
+.scroll-wrapper {
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    background: #FFF;
+    height: 90rpx;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 去掉滚动条 */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.navigate-item {
+    display: inline-block;
+    text-align: center;
+    height: 90rpx;
+    margin: 0 30rpx;
+}
+
+.names {
+    font-size: 30rpx;
+    color: #3c3c3c;
+}
+
+.names.active {
+    color: #F9A7A7;
+    font-weight: bold;
+    font-size: 32rpx;
+}
+
+.currtline {
+    margin-top: 10rpx;
+    width: 66rpx;
+    height: 6rpx;
+    border-radius: 4rpx;
+}
+
+.currtline.active {
+    background: #F9A7A7;
+    transition: all .3s;
+}
+
+.tab_title {
+    margin: 20rpx;
+    border: 1px solid #F9A7A7;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+
+swiper {
+    min-height: calc(100vh - 100rpx);
+}
+
+.swiper-item {
+    width: 100%;
+    padding: 32rpx;
+    box-sizing: border-box;
+}
+
+scroll-view {
+    height: calc(100vh - 100rpx);
+}

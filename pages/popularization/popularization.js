@@ -9,13 +9,92 @@ Page({
     // 此页面 页面内容距最顶部的距离
     height: app.globalData.height * 2 + 20,
 
+    stickyProps: {
+      zIndex: 2,
+    },
+    menuButtonHeight: 0,
+    menuButtonTop: 0,
+
+    isRefresh: false,
+
+    currentTab: 0,
+    tabList: [
+      {
+        name: '推荐'
+      },
+      {
+        name: '文章'
+      },
+      {
+        name: '视频'
+      }
+    ]
+
+  },
+
+  // onTabsChange(event) {
+  //   console.log(`Change tab, tab-panel value is ${event.detail.value}.`);
+  // },
+
+  // onTabsClick(event) {
+  //   console.log(`Click tab, tab-panel value is ${event.detail.value}.`);
+  // },
+
+  // onStickyScroll(event) {
+  //   console.log(event.detail);
+  // },
+
+
+  tabNav(e) {
+    let currentTab = e.currentTarget.dataset.index
+    this.setData({
+      currentTab
+    })
+  },
+  handleSwiper(e) {
+    let {current,source} = e.detail
+    if (source === 'autoplay' || source === 'touch') {
+      const currentTab = current
+      this.setData({
+        currentTab
+      })
+    }
+  },
+  handleTolower(e){
+    wx.showToast({
+      title: '到底啦'
+    })
+  },
+  refresherpulling() {
+    wx.showLoading({
+      title: '刷新中'
+    })
+    setTimeout(() => {
+      this.setData({
+        isRefresh: false
+      })
+      wx.showToast({
+        title: '加载完成'
+      })
+    }, 1500)
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    const res = wx.getMenuButtonBoundingClientRect()
+    this.setData({
+      menuButtonHeight: res.height,
+      menuButtonTop: res.top
+    })
 
+    console.log(res.width)
+    console.log(res.height)
+    console.log(res.top)
+    console.log(res.right)
+    console.log(res.bottom)
+    console.log(res.left)
   },
 
   /**
