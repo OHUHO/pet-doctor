@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "serch-component": "/components/search/search"
+  },
   "navigationStyle": "custom"
 }

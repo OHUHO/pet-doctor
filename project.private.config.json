@@ -28,6 +28,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/popularization/popularization",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
