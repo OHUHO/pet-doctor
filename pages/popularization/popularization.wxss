@@ -20,9 +20,10 @@
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     background: #FFF;
-    height: 90rpx;
     box-sizing: border-box;
     text-align: center;
+    /* background-color: green; */
+    position: fixed;
 }
 
 /* 去掉滚动条 */
@@ -42,6 +43,7 @@
 .names {
     font-size: 30rpx;
     color: #3c3c3c;
+    /* position: fixed; */
 }
 
 .names.active {
@@ -75,10 +77,10 @@ swiper {
 
 .swiper-item {
     width: 100%;
-    padding: 32rpx;
-    box-sizing: border-box;
+    padding: 0 32rpx;
 }
 
 scroll-view {
     height: calc(100vh - 100rpx);
+    height: 2000px;
 }

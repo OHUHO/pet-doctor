@@ -1,19 +1,11 @@
 <!--pages/popularization/popularization.wxml-->
-<!-- <view style='margin-top: {{height*2+20}}rpx'> 
-    <search-component></search-component>
-</view> -->
 
-<!-- <view style="margin-top: {{menuButtonTop+20}}rpx">
-    <t-tabs defaultValue="{{0}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs" class="custom-tabs">
-        <t-tab-panel label="推荐" value="0">内容1</t-tab-panel>
-        <t-tab-panel label="文章" value="1">内容2</t-tab-panel>
-        <t-tab-panel label="视频" value="2">内容3</t-tab-panel>
-    </t-tabs>
-</view> -->
+<!-- <navbar-component navbar-data='{{nvabarData}}'></navbar-component> -->
+
 
 <scroll-view class="scroll-wrapper" scroll-x scroll-with-animation="true"
     scroll-into-view="item{{currentTab < 4 ? 0 : currentTab - 3}}" 
-    style="margin-top: {{menuButtonTop}}px; height:{{menuButtonHeight}}px">
+    style="margin-top: {{menuButtonTop}}px; height:{{menuButtonHeight+4}}px">
     <view class="navigate-item" id="item{{index}}" wx:for="{{tabList}}" wx:key="index" data-index="{{index}}"
         bindtap="tabNav">
         <view class="names {{currentTab === index ? 'active' : ''}}">{{item.name}}</view>
@@ -21,34 +13,33 @@
     </view>
 </scroll-view>
 <swiper indicator-dots="{{false}}" bindchange="handleSwiper" current="{{currentTab}}">
-    <!-- <block wx:for="{{tabList}}" wx:key="index">
-        <swiper-item style="overflow: scroll;">
-            <view class="tab_title">tab{{currentTab+1}}内容</view>
-            <scroll-view scroll-y refresher-enabled refresher-background="#F6F7F8" refresher-triggered="{{isRefresh}}"
-                bindrefresherrefresh="refresherpulling" bindscrolltolower="handleTolower">
-
-            </scroll-view>
-        </swiper-item>
-    </block> -->
+  <view style="margin-top: 174rpx;">
     <swiper-item style="overflow: scroll;">
-        <!-- <view class="tab_title">tab{{currentTab+1}}内容</view> -->
         <scroll-view scroll-y refresher-enabled refresher-background="#F6F7F8" refresher-triggered="{{isRefresh}}"
             bindrefresherrefresh="refresherpulling" bindscrolltolower="handleTolower">
-            推荐页面
+            <view class="swiper-item">
+                推荐页面内容
+            </view>
         </scroll-view>
     </swiper-item>
     <swiper-item>
         <scroll-view scroll-y refresher-enabled refresher-background="#F6F7F8" refresher-triggered="{{isRefresh}}"
             bindrefresherrefresh="refresherpulling" bindscrolltolower="handleTolower">
-            文章页面
+            <view class="swiper-item">
+                文章页面
+            </view>
         </scroll-view>
     </swiper-item>
     <swiper-item>
         <scroll-view scroll-y refresher-enabled refresher-background="#F6F7F8" refresher-triggered="{{isRefresh}}"
             bindrefresherrefresh="refresherpulling" bindscrolltolower="handleTolower">
-            视频页面
+            <view class="swiper-item">
+                视频页面
+            </view>
         </scroll-view>
     </swiper-item>
+  </view>
+    
 </swiper>
 
 <!-- <swiper indicator-dots="{{false}}" bindchange="handleSwiper" current="{{currentTab}}">

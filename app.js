@@ -1,10 +1,5 @@
 // app.js
 App({
-
-  globalData:{
-    height: 0,
-    
-  },
   onLaunch() {
     // 展示本地存储能力
     const logs = wx.getStorageSync('logs') || []
@@ -26,29 +21,34 @@ App({
       }
     })
 
-    // 自定义头部
-    // let menuButtonObject = wx.getMenuButtonBoundingClientRect();
-    // wx.getSystemInfo({
-    //   success: res => {
-    //     //导航高度
-    //     let statusBarHeight = res.statusBarHeight,
-    //       navTop = menuButtonObject.top,
-    //       navObjWid = res.windowWidth - menuButtonObject.right + menuButtonObject.width, // 胶囊按钮与右侧的距离 = windowWidth - right+胶囊宽度
-    //       navHeight = statusBarHeight + menuButtonObject.height + (menuButtonObject.top - statusBarHeight) * 2;
-    //     this.globalData.navHeight = navHeight; //导航栏总体高度
-    //     this.globalData.navTop = navTop; //胶囊距离顶部距离
-    //     this.globalData.navObj = menuButtonObject.height; //胶囊高度
-    //     this.globalData.navObjWid = navObjWid; //胶囊宽度(包括右边距离)
-    //     this.globalData.windowHeight = res.windowHeight;
-    //     this.globalData.windowWidth = res.windowWidth;
-    //     // console.log(navHeight,navTop,menuButtonObject.height,navObjWid)
-    //   },
-    //   fail(err) {
-    //     console.log(err);
-    //   }
-    // })
+    const that = this;
+    // 获取系统信息
+    const systemInfo = wx.getSystemInfoSync();
+    console.log(systemInfo)
+    // 胶囊按钮位置信息
+    const menuButtonInfo = wx.getMenuButtonBoundingClientRect();
+    console.log(menuButtonInfo)
+    // 导航栏高度 = 状态栏到胶囊的间距（胶囊距上距离-状态栏高度） * 2 + 胶囊高度 + 状态栏高度
+    that.globalData.navBarHeight = (menuButtonInfo.top - systemInfo.statusBarHeight) * 2 + menuButtonInfo.height;
+    that.globalData.statusBarHeight = systemInfo.statusBarHeight;
+    that.globalData.menuRight = systemInfo.screenWidth - menuButtonInfo.right;
+    that.globalData.menuBotton = menuButtonInfo.top - systemInfo.statusBarHeight;
+    that.globalData.menuHeight = menuButtonInfo.height;
+    that.globalData.menuWidth = menuButtonInfo.width;
+    that.globalData.windowWidth = systemInfo.windowWidth;
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    height: 0,
+
+    navBarHeight: 0, // 导航栏高度
+    statusBarHeight: 0, // 状态栏高度
+    menuRight: 0, // 胶囊距右方间距（方保持左、右间距一致）
+    menuBotton: 0, // 胶囊距底部间距（保持底部间距一致）
+    menuHeight: 0, // 胶囊高度（自定义内容可与胶囊高度保证一致）
+    menuWidth: 0, // 胶囊宽度（自定义内容可与胶囊宽度保证一致）
+    windowWidth: 0, // 页面宽度
+
+
   }
 })
