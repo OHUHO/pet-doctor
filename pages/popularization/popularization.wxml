@@ -1,8 +1,5 @@
 <!--pages/popularization/popularization.wxml-->
 
-<!-- <navbar-component navbar-data='{{nvabarData}}'></navbar-component> -->
-
-
 <scroll-view class="scroll-wrapper" scroll-x scroll-with-animation="true"
     scroll-into-view="item{{currentTab < 4 ? 0 : currentTab - 3}}" 
     style="margin-top: {{menuButtonTop*2+4}}rpx; height:{{menuButtonHeight*2}}rpx">
@@ -14,14 +11,21 @@
 </scroll-view>
 <swiper indicator-dots="{{false}}" bindchange="handleSwiper" current="{{currentTab}}">
   <view style="margin-top: 174rpx;">
+
     <swiper-item style="overflow: scroll;">
-        <scroll-view scroll-y refresher-enabled refresher-background="#F6F7F8" refresher-triggered="{{isRefresh}}"
-            bindrefresherrefresh="refresherpulling" bindscrolltolower="handleTolower">
+        <scroll-view 
+            scroll-y 
+            refresher-enabled 
+            refresher-background="#F6F7F8" 
+            refresher-triggered="{{isRefresh}}"
+            bindrefresherrefresh="refresherpulling" 
+            bindscrolltolower="handleTolower">
             <view class="swiper-item">
                 推荐页面
             </view>
         </scroll-view>
     </swiper-item>
+
     <swiper-item>
         <scroll-view scroll-y refresher-enabled refresher-background="#F6F7F8" refresher-triggered="{{isRefresh}}"
             bindrefresherrefresh="refresherpulling" bindscrolltolower="handleTolower">
@@ -30,6 +34,7 @@
             </view>
         </scroll-view>
     </swiper-item>
+
     <swiper-item>
         <scroll-view scroll-y refresher-enabled refresher-background="#F6F7F8" refresher-triggered="{{isRefresh}}"
             bindrefresherrefresh="refresherpulling" bindscrolltolower="handleTolower">
@@ -38,6 +43,6 @@
             </view>
         </scroll-view>
     </swiper-item>
+
   </view>
-    
 </swiper>
