@@ -1,7 +1,6 @@
 {
   "usingComponents": {
-    "search-component": "/components/search/search",
-    "navbar-component": "/components/navbar/navbar"
+    "search-component": "/components/search/search"
   },
   "navigationStyle": "custom"
 }

@@ -1,7 +1,0 @@
-<view class='navbar' style='height: {{height*2+20}}px;'>
-  <!-- // 导航栏 中间的标题 -->
-  <view class='title' style='line-height: {{height*2 +30}}px;'>推荐</view>
-  <view class='title' style='line-height: {{height*2 + 30}}px;'>文章</view>
-  <view class='title' style='line-height: {{height*2 + 30}}px;'>视频</view>
-  
-</view>

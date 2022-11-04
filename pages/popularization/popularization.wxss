@@ -22,28 +22,27 @@
     background: #FFF;
     box-sizing: border-box;
     text-align: center;
-    /* background-color: green; */
+    /* margin-left: 60rpx; */
     position: fixed;
+    z-index: 100;
 }
 
 /* 去掉滚动条 */
 ::-webkit-scrollbar {
-    width: 0;
+    /* width: 0;
     height: 0;
-    color: transparent;
+    color: transparent; */
 }
 
 .navigate-item {
     display: inline-block;
     text-align: center;
-    height: 90rpx;
     margin: 0 30rpx;
 }
 
 .names {
     font-size: 30rpx;
     color: #3c3c3c;
-    /* position: fixed; */
 }
 
 .names.active {
@@ -72,7 +71,7 @@
 }
 
 swiper {
-    min-height: calc(100vh - 100rpx);
+    min-height: 100vh;
 }
 
 .swiper-item {
@@ -82,5 +81,6 @@ swiper {
 
 scroll-view {
     height: calc(100vh - 100rpx);
+    height: 100vh;
     height: 2000px;
 }
