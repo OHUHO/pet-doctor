@@ -1,2 +1,17 @@
 <!--components/recommend/recommend.wxml-->
-<text>components/recommend/recommend.wxml</text>
+<!-- 
+    单封面：标题；头像、用户名；内容简略、图片；文章其他数据
+    三封面：标题；头像、用户名；内容简略；三图片；文章其他数据
+    视  频：标题；头像、用户名；视频；文章其他数据
+-->
+
+<view class="container">
+    <text>{{obj.title}}</text>
+    <view class="userinfo">
+        <image src="/images/cat.png"></image>
+        <text>{{obj.username}}</text>
+    </view>
+    <!-- 判断数据类型 -->
+    
+
+</view>
