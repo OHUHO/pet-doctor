@@ -31,7 +31,8 @@
         <scroll-view scroll-y refresher-enabled refresher-background="#F6F7F8" refresher-triggered="{{isRefresh}}"
             bindrefresherrefresh="refresherpulling" bindscrolltolower="handleTolower">
             <view class="swiper-item">
-                文章页面
+                <!-- 文章页面 -->
+                <recommend-component></recommend-component>
             </view>
         </scroll-view>
     </swiper-item>
@@ -40,7 +41,8 @@
         <scroll-view scroll-y refresher-enabled refresher-background="#F6F7F8" refresher-triggered="{{isRefresh}}"
             bindrefresherrefresh="refresherpulling" bindscrolltolower="handleTolower">
             <view class="swiper-item">
-                视频页面
+                <!-- 视频页面 -->
+                <video-component></video-component>
             </view>
         </scroll-view>
     </swiper-item>
