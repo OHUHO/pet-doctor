@@ -75,8 +75,9 @@ swiper {
 }
 
 .swiper-item {
-    width: 100%;
-    padding: 0 32rpx;
+    /* width: 100%; */
+    margin-top: 20rpx;
+    /* padding: 0 10rpx; */
 }
 
 scroll-view {

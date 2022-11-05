@@ -1,1 +1,56 @@
 /* components/recommend/recommend.wxss */
+.container{
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+
+}
+.box {
+    /* background-color: purple; */
+    margin: 0 14rpx;
+    margin-bottom: 20rpx;
+    
+    border-radius: 20rpx;
+    box-shadow: 6rpx 6rpx 20rpx #e2e1e1;
+    padding: 14rpx;
+}
+.userinfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.portrait{
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    margin-right: 10rpx;
+}
+.content {
+    display: flex;
+    /* flex-direction: column; */
+}
+.content-img1 {
+    display: flex;
+    flex-direction: row;
+}
+.content-img1 image {
+    width: 250rpx;
+    height: 120rpx;
+}
+
+.content-img3{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.content-img3 .img3{
+    display: flex;
+    width: 100%;
+}
+.content-img3 .img3 image{
+    width: 33.333%;
+    height: 140rpx;
+}
+.content-img3 .img3 image:nth-child(2) {
+    margin: 0rpx 10rpx;
+}

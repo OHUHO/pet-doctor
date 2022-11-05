@@ -2,16 +2,39 @@
 <!-- 
     单封面：标题；头像、用户名；内容简略、图片；文章其他数据
     三封面：标题；头像、用户名；内容简略；三图片；文章其他数据
+
     视  频：标题；头像、用户名；视频；文章其他数据
 -->
 
 <view class="container">
-    <text>{{obj.title}}</text>
-    <view class="userinfo">
-        <image src="/images/cat.png"></image>
-        <text>{{obj.username}}</text>
+    <view wx:for="{{dataList}}" wx:key="index" class="box">
+        <text>{{item.title}}</text>
+        <view class="userinfo">
+            <image class="portrait" src="/images/cat.png"></image>
+            <text>{{item.username}}</text>
+        </view>
+        <!-- 判断图片数量 -->
+        <view class="content">
+            <view wx:if="{{item.imgSrc.length==0}}">
+                <text>{{item.content}}</text>
+            </view>
+            <view wx:elif="{{item.imgSrc.length==1}}" class="content-img1">
+                <text>{{item.content}}</text>
+                <image class="img-1" src="{{item.imgSrc[0]}}"></image>
+            </view>
+            <view wx:else class="content-img3">
+                <text>{{item.content}}</text>
+                <view class="img3">
+                    <image src="{{item.imgSrc[0]}}"></image>
+                    <image src="{{item.imgSrc[1]}}"></image>
+                    <image src="{{item.imgSrc[2]}}"></image>
+                </view>
+            </view>
+        </view>
+        <view class="article-other">
+            <text>{{item.views}} 浏览  {{item.goods}} 点赞</text>
+        </view>
     </view>
-    <!-- 判断数据类型 -->
     
 
 </view>

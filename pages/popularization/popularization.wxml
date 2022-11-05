@@ -21,7 +21,7 @@
             bindrefresherrefresh="refresherpulling" 
             bindscrolltolower="handleTolower">
             <view class="swiper-item">
-                推荐页面
+                <!-- 推荐页面 -->
                 <recommend-component></recommend-component>
             </view>
         </scroll-view>
