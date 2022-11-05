@@ -8,22 +8,22 @@
 
 <view class="container">
     <view wx:for="{{dataList}}" wx:key="index" class="box">
-        <text>{{item.title}}</text>
+        <text class="title">{{item.title}}</text>
         <view class="userinfo">
             <image class="portrait" src="/images/cat.png"></image>
-            <text>{{item.username}}</text>
+            <text class="username">{{item.username}}</text>
         </view>
         <!-- 判断图片数量 -->
         <view class="content">
             <view wx:if="{{item.imgSrc.length==0}}">
-                <text>{{item.content}}</text>
+                <text class="content-img0">{{item.content}}</text>
             </view>
-            <view wx:elif="{{item.imgSrc.length==1}}" class="content-img1">
-                <text>{{item.content}}</text>
+            <view wx:elif="{{item.imgSrc.length==1}}" class="content-img1-box">
+                <text class="content-img1">{{item.content}}</text>
                 <image class="img-1" src="{{item.imgSrc[0]}}"></image>
             </view>
-            <view wx:else class="content-img3">
-                <text>{{item.content}}</text>
+            <view wx:else class="content-img3-box">
+                <text class="content-img3">{{item.content}}</text>
                 <view class="img3">
                     <image src="{{item.imgSrc[0]}}"></image>
                     <image src="{{item.imgSrc[1]}}"></image>

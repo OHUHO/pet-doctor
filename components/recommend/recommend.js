@@ -17,7 +17,7 @@ Component({
         imgSrc:'url',
         username: '用户名',
         
-        content:'这是一段内容，这是一段内容，这是一段内容',
+        content:'测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
         imgSrc:["/images/cat.png"],
         videoSrc:"/images/cat.png",
         
@@ -30,7 +30,7 @@ Component({
         imgSrc:'url',
         username: '用户名',
         
-        content:'这是一段内容，这是一段内容，这是一段内容',
+        content:'测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
         imgSrc:["/images/cat.png","/images/cat.png","/images/cat.png"],
         videoSrc:"/images/cat.png",
         
@@ -43,7 +43,7 @@ Component({
         imgSrc:'url',
         username: '用户名',
         
-        content:'这是一段内容，这是一段内容，这是一段内容',
+        content:'测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
         imgSrc:[],
         videoSrc:"/images/cat.png",
         

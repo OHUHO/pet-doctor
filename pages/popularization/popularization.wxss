@@ -78,12 +78,13 @@ swiper {
     /* width: 100%; */
     margin-top: 20rpx;
     /* padding: 0 10rpx; */
+    /* margin-bottom: 100rpx; */
 }
+
 
 scroll-view {
     height: calc(100vh - 100rpx);
     height: 100vh;
-    height: 2000px;
 }
 
 /* --------------下面为页面中的内容----------------- */

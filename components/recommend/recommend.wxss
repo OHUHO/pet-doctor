@@ -14,10 +14,15 @@
     box-shadow: 6rpx 6rpx 20rpx #e2e1e1;
     padding: 14rpx;
 }
+.title {
+    font-size: 34rpx;
+    font-weight: 500;
+}
 .userinfo {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 10rpx;
 }
 .portrait{
     width: 40rpx;
@@ -25,33 +30,65 @@
     border-radius: 50%;
     margin-right: 10rpx;
 }
+.username {
+    font-size: 26rpx;
+    color: #1e1e1e;
+    font-family: 'PingFang SC-Medium';
+}
 .content {
-    display: flex;
+    /* display: flex; */
     /* flex-direction: column; */
+    margin: 10rpx 0;
 }
 .content-img1 {
+    width: 70%;
+    font-size: 30rpx;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    color: #1e1e1e;
+}
+.content-img0, .content-img3 {
+    font-size: 30rpx;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: #1e1e1e;
+    
+}
+.content-img1-box {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
-.content-img1 image {
+.content-img1-box image {
     width: 250rpx;
     height: 120rpx;
+    margin-left: 10rpx;
 }
 
-.content-img3{
+.content-img3-box{
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-.content-img3 .img3{
+.content-img3-box .img3{
     display: flex;
     width: 100%;
 }
-.content-img3 .img3 image{
+.content-img3-box .img3 image{
     width: 33.333%;
     height: 140rpx;
 }
-.content-img3 .img3 image:nth-child(2) {
+.content-img3-box .img3 image:nth-child(2) {
     margin: 0rpx 10rpx;
 }
 
+.article-other {
+    font-size: 26rpx;
+    color: #868585;
+}
