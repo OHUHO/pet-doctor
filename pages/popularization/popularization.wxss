@@ -21,8 +21,8 @@
     -webkit-overflow-scrolling: touch;
     background: #FFF;
     box-sizing: border-box;
-    text-align: center;
-    /* margin-left: 60rpx; */
+    /* text-align: center; */
+    margin-left: 150rpx;
     position: fixed;
     z-index: 100;
 }
@@ -41,19 +41,19 @@
 }
 
 .names {
-    font-size: 30rpx;
+    font-size: 36rpx;
     color: #3c3c3c;
 }
 
 .names.active {
     color: #F9A7A7;
     font-weight: bold;
-    font-size: 32rpx;
+    font-size: 38rpx;
 }
 
 .currtline {
-    margin-top: 10rpx;
-    width: 66rpx;
+    margin-top: 4rpx;
+    width: 80rpx;
     height: 6rpx;
     border-radius: 4rpx;
 }

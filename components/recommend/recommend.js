@@ -31,7 +31,7 @@ Component({
         username: '用户名',
         
         content:'测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
-        imgSrc:["/images/cat.png","/images/cat.png","/images/cat.png"],
+        imgSrc:["/images/pets/1.png","/images/pets/2.png","/images/pets/3.png"],
         videoSrc:"/images/cat.png",
         
         views:44,
@@ -50,7 +50,20 @@ Component({
         views:44,
         goods:120,
   
-      }
+      },
+      {
+        title: '这是一个标题',
+        imgSrc:'url',
+        username: '用户名',
+        
+        content:'测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
+        imgSrc:["/images/pets/2.png"],
+        videoSrc:"/images/cat.png",
+        
+        views:44,
+        goods:120,
+  
+      },
     ],
     
   },
