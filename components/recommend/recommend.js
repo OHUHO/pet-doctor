@@ -72,6 +72,14 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    tranArticleDetails(event){
+      // 获取wxml页面传递过来的值
+      const article = event.currentTarget.dataset.article
+      // 跳转页面时将值传递到新的页面
+      wx.navigateTo({
+        url: "/pages/popularization/articleDetails/articleDetails?article="+JSON.stringify(article),
+      })
+    }
 
   }
 })

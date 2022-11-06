@@ -7,7 +7,11 @@
 -->
 
 <view class="container">
-    <view wx:for="{{dataList}}" wx:key="index" class="box">
+    <view wx:for="{{dataList}}" 
+        wx:key="index" 
+        class="box"  
+        bindtap="tranArticleDetails" 
+        data-article="{{item}}">
         <text class="title">{{item.title}}</text>
         <view class="userinfo">
             <image class="portrait" src="/images/cat.png"></image>

@@ -65,22 +65,22 @@ Page({
       })
     }
   },
-  handleTolower(e){
-    wx.showToast({
-      title: '到底啦'
-    })
-  },
+  // handleTolower(e){
+  //   wx.showToast({
+  //     title: '到底啦'
+  //   })
+  // },
   refresherpulling() {
-    wx.showLoading({
-      title: '刷新中'
-    })
+    // wx.showLoading({
+    //   title: '刷新中'
+    // })
     setTimeout(() => {
       this.setData({
         isRefresh: false
       })
-      wx.showToast({
-        title: '加载完成'
-      })
+      // wx.showToast({
+      //   title: '加载完成'
+      // })
     }, 1500)
   },
 
