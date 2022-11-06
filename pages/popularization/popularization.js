@@ -94,12 +94,12 @@ Page({
       menuButtonTop: res.top
     })
 
-    console.log(res.width)
-    console.log(res.height)
-    console.log(res.top)
-    console.log(res.right)
-    console.log(res.bottom)
-    console.log(res.left)
+    // console.log(res.width)
+    // console.log(res.height)
+    // console.log(res.top)
+    // console.log(res.right)
+    // console.log(res.bottom)
+    // console.log(res.left)
   },
 
   /**

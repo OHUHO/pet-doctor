@@ -1,2 +1,4 @@
 <!--components/comment/comment.wxml-->
-<text>components/comment/comment.wxml</text>
+<view class="container">
+    <image src="{{commentList[0].portrait}}"></image>
+</view>
