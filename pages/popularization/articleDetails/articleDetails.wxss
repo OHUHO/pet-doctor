@@ -1,4 +1,49 @@
 /* pages/popularization/articleDetails/articleDetails.wxss */
-.article-conteiner{
-    
+.article-container{
+    display: fle;
+    flex-direction: column;
+    margin: 0 20rpx;
+}
+.title {
+    font-size: 36rpx;
+    font-weight: 600;
+    border-bottom: 2rpx solid whitesmoke;
+    padding: 15rpx 0;
+}
+.userinfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15rpx 0;
+}
+.portrait {
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 50%;
+    margin-right: 10rpx;
+}
+.username {
+    font-size: 30rpx;
+}
+.view-num {
+    font-size: 26rpx;
+    color: #868585;
+    margin-bottom: 10rpx;
+}
+.content {
+    font-size: 32rpx;
+}
+.time {
+    font-size: 26rpx;
+    color: #868585;
+    margin: 20rpx 0;
+}
+/* 评论 */
+.comment-container{
+
+}
+.comment-title {
+    font-size: 32rpx;
+    font-weight: 600;
+    /* color: red; */
 }

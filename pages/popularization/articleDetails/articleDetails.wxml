@@ -1,6 +1,17 @@
 <!--pages/popularization/articleDetails/articleDetails.wxml-->
 
-<view class="article-conteiner">
+<view class="article-container">
+    <view class="title">{{article.title}}</view>
+    <view class="userinfo">
+        <image src="{{article.portrait}}" class="portrait"></image>
+        <text class="username">{{article.username}}</text>
+    </view>
+    <view class="view-num">{{article.views}} 人浏览了文章</view>
+    <view class="content">{{article.content}}</view>
+    <view class="time">编辑于{{article.time}}</view>
 
-
+    <!-- 评论 -->
+    <view class="comment-container">
+        <view class="comment-title">评论 {{comment.num}}</view>
+    </view>
 </view>
