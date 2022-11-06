@@ -35,36 +35,87 @@ Page({
       "createTime":"2022-03-09 16:03:03",
       "contents":"电子科技大学成都学院计算机学院/商学院联合开发的微信小程序即将上线！！"
   },
-  comment:{
-    "num": 250,
-    "commentId": 23,
-    "messageId": 22,
-    "userId": "220118CK3F6DGSCH",
-    "username": "Aubuary",
-    "portrait": "https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eo0JnOqicrn63GG2AQAOTsuFRjV1ibnIlhBjnsYrHcHwfqoicm5PiaON6nEDUwL4R7xT3uY2c9TnhZDSA/132",
-    "creatTime": "2022-03-09 16:06:06",
-    "commentDetail": "扭转乾坤",
-    "replyList": [
-        {
-            "replyId": 34,
-            "commentId": 23,
-            "userId": "220118CK3F6DGSCH",
-            "username": "Aubuary",
-            "portrait": "https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eo0JnOqicrn63GG2AQAOTsuFRjV1ibnIlhBjnsYrHcHwfqoicm5PiaON6nEDUwL4R7xT3uY2c9TnhZDSA/132",
-            "creatTime": "2022-03-09 16:07:07",
-            "replyDetail": "冲冲冲！！！"
-        },
-        {
-            "replyId": 40,
-            "commentId": 23,
-            "userId": "220118CK3F6DGSCH",
-            "username": "Aubuary",
-            "portrait": "https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eo0JnOqicrn63GG2AQAOTsuFRjV1ibnIlhBjnsYrHcHwfqoicm5PiaON6nEDUwL4R7xT3uY2c9TnhZDSA/132",
-            "creatTime": "2022-11-06 11:06:06",
-            "replyDetail": "宠物医生来了"
-        }
-    ]
-}
+
+  comment:[
+    {
+        "commentId": 23,
+        "messageId": 22,
+        "userId": "220118CK3F6DGSCH",
+        "username": "Aubuary",
+        "portrait": "/images/be/grill.jpeg",
+        "creatTime": "2022-03-09 16:06:06",
+        "commentDetail": "扭转乾坤",
+        "replyList": [
+            {
+                "replyId": 34,
+                "commentId": 23,
+                "userId": "220118CK3F6DGSCH",
+                "username": "Aubuary",
+                "portrait": "/images/be/6.jpeg",
+                "creatTime": "2022-03-09 16:07:07",
+                "replyDetail": "冲冲冲！！！"
+            },
+            {
+                "replyId": 40,
+                "commentId": 23,
+                "userId": "220118CK3F6DGSCH",
+                "username": "Aubuary",
+                "portrait": "/images/be/8.jpeg",
+                "creatTime": "2022-11-06 11:06:06",
+                "replyDetail": "宠物医生来了"
+            }
+        ]
+    },
+    {
+        "commentId": 31,
+        "messageId": 22,
+        "userId": "220118CK3F6DGSCH",
+        "username": "Aubuary",
+        "portrait": "/images/be/7.jpeg",
+        "creatTime": "2022-11-06 14:00:00",
+        "commentDetail": "再来一条评论",
+        "replyList": [
+            {
+                "replyId": 41,
+                "commentId": 31,
+                "userId": "220118CK3F6DGSCH",
+                "username": "Aubuary",
+                "portrait": "/images/be/grill.jpeg",
+                "creatTime": "2022-11-06 14:01:01",
+                "replyDetail": "回复一评论"
+            }
+        ]
+    },
+    {
+        "commentId": 32,
+        "messageId": 22,
+        "userId": "220118CK3F6DGSCH",
+        "username": "Aubuary",
+        "portrait": "/images/be/8.jpeg",
+        "creatTime": "2022-11-06 14:01:01",
+        "commentDetail": "再来一条评论",
+        "replyList": [
+            {
+                "replyId": 42,
+                "commentId": 32,
+                "userId": "220118CK3F6DGSCH",
+                "username": "Aubuary",
+                "portrait": "/images/be/6.jpeg",
+                "creatTime": "2022-11-06 14:01:01",
+                "replyDetail": "回复00"
+            },
+            {
+                "replyId": 43,
+                "commentId": 32,
+                "userId": "220118CK3F6DGSCH",
+                "username": "Aubuary",
+                "portrait": "/images/be/7.jpeg",
+                "creatTime": "2022-11-06 14:01:01",
+                "replyDetail": "回复01"
+            }
+        ]
+    }
+],
 
   },
 
