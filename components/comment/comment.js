@@ -7,7 +7,9 @@ Component({
     commentList: {
       type: null,
       value:[]
-    }
+    },
+    commentNum:Number,
+    
   },
 
   /**

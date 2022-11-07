@@ -35,10 +35,12 @@ Page({
       "createTime": "2022-03-09 16:03:03",
       "contents": "电子科技大学成都学院计算机学院/商学院联合开发的微信小程序即将上线！！"
     },
-
+    // 评论数量
+    commentNum: 44,
     // 文章的评论信息
     commentList: [
       {
+        "num": 44,
         "commentId": 23,
         "messageId": 22,
         "userId": "220118CK3F6DGSCH",

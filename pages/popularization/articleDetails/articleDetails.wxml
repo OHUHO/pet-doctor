@@ -10,6 +10,9 @@
     <view class="content">{{article.content}}</view>
     <view class="time">编辑于{{article.time}}</view>
 
-    <!-- 评论组件 -->
-    <comment-component commentList="{{commentList}}"></comment-component>
+    <!-- 评论组件：传入评论数量和评论的内容 -->
+    <comment-component 
+        commentNum="{{commentNum}}" 
+        commentList="{{commentList}}">
+    </comment-component>
 </view>
