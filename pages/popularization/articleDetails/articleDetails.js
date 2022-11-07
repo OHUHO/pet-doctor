@@ -20,21 +20,7 @@ Page({
       time: "2022-11-06 13:46"
 
     },
-    temp: {
-      "id": 22,
-      "messageId": null,
-      "userId": "220118CK3F6DGSCH",
-      "portrait": "https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eo0JnOqicrn63GG2AQAOTsuFRjV1ibnIlhBjnsYrHcHwfqoicm5PiaON6nEDUwL4R7xT3uY2c9TnhZDSA/132",
-      "username": "Aubuary",
-      "title": "电子科技大学成都学院",
-      "labelList": "[\"重金酬谢\",\"免费问答\",\"在线答疑\"]",
-      "school": "电子科技大学成都学院",
-      "major": "软件工程",
-      "isGiveMoney": true,
-      "money": 66,
-      "createTime": "2022-03-09 16:03:03",
-      "contents": "电子科技大学成都学院计算机学院/商学院联合开发的微信小程序即将上线！！"
-    },
+    
     // 评论数量
     commentNum: 44,
     // 文章的评论信息
