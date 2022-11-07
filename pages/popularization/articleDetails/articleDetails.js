@@ -42,7 +42,7 @@ Page({
         "commentId": 23,
         "messageId": 22,
         "userId": "220118CK3F6DGSCH",
-        "username": "Aubuary",
+        "username": "用户1",
         "portrait": "/images/be/6.jpeg",
         "creatTime": "2022-03-09 16:06:06",
         "commentDetail": "微信小程序开发，宠物医生主要包含医生和科普两个大的板块。",
@@ -51,8 +51,9 @@ Page({
             "replyId": 34,
             "commentId": 23,
             "userId": "220118CK3F6DGSCH",
-            "username": "Aubuary",
+            "username": "用户2",
             "portrait": "/images/be/grill.jpeg",
+            "toUsername": "用户1",
             "creatTime": "2022-03-09 16:07:07",
             "replyDetail": "冲冲冲！！！"
           },
@@ -60,8 +61,9 @@ Page({
             "replyId": 40,
             "commentId": 23,
             "userId": "220118CK3F6DGSCH",
-            "username": "Aubuary",
+            "username": "用户3",
             "portrait": "/images/be/8.jpeg",
+            "toUsername": "用户1",
             "creatTime": "2022-11-06 11:06:06",
             "replyDetail": "宠物医生来了"
           }
@@ -71,7 +73,7 @@ Page({
         "commentId": 31,
         "messageId": 22,
         "userId": "220118CK3F6DGSCH",
-        "username": "Aubuary",
+        "username": "用户4",
         "portrait": "/images/be/7.jpeg",
         "creatTime": "2022-11-06 14:00:00",
         "commentDetail": "再来一条评论",
@@ -80,8 +82,9 @@ Page({
             "replyId": 41,
             "commentId": 31,
             "userId": "220118CK3F6DGSCH",
-            "username": "Aubuary",
+            "username": "用户2",
             "portrait": "/images/be/grill.jpeg",
+            "toUsername": "用户4",
             "creatTime": "2022-11-06 14:01:01",
             "replyDetail": "回复一评论"
           }
@@ -91,7 +94,17 @@ Page({
         "commentId": 32,
         "messageId": 22,
         "userId": "220118CK3F6DGSCH",
-        "username": "Aubuary",
+        "username": "用户3",
+        "portrait": "/images/be/8.jpeg",
+        "creatTime": "2022-11-06 14:01:01",
+        "commentDetail": "时间一直倒数着《倒数》—— 邓紫棋",
+        "replyList": []
+      },
+      {
+        "commentId": 32,
+        "messageId": 22,
+        "userId": "220118CK3F6DGSCH",
+        "username": "用户3",
         "portrait": "/images/be/8.jpeg",
         "creatTime": "2022-11-06 14:01:01",
         "commentDetail": "再来一条评论",
@@ -100,8 +113,9 @@ Page({
             "replyId": 42,
             "commentId": 32,
             "userId": "220118CK3F6DGSCH",
-            "username": "Aubuary",
+            "username": "用户1",
             "portrait": "/images/be/6.jpeg",
+            "toUsername": "用户3",
             "creatTime": "2022-11-06 14:01:01",
             "replyDetail": "回复00"
           },
@@ -109,15 +123,15 @@ Page({
             "replyId": 43,
             "commentId": 32,
             "userId": "220118CK3F6DGSCH",
-            "username": "Aubuary",
+            "username": "用户4",
             "portrait": "/images/be/7.jpeg",
+            "toUsername": "用户1",
             "creatTime": "2022-11-06 14:01:01",
             "replyDetail": "回复01"
           }
         ]
-      }
+      },
     ],
-
   },
 
   /**

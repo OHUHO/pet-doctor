@@ -3,27 +3,43 @@
 <view class="container">
     <view class="comment-title">评论 {{comment.num}}</view>
     <view class="comment-content">
+        <!-- 下面是父级评论内容 -->
         <view wx:for="{{commentList}}" wx:key="index">
             <view class="parent-comment">
-                <view class="info">
-                    <view class="left">
-                        <image src="{{item.portrait}}"></image>
-                    </view>
-                    <view class="right">
-                        <view class="username-row">
-                            <label class="username">{{item.username}}</label>
-                            <label class="time">{{item.creatTime}}</label>
-                        </view>
-                        <view>
-                            <text>{{item.commentDetail}}</text>
-                        </view>
-                    </view>
-                    
+                <view class="left">
+                    <image class="portrait" src="{{item.portrait}}"></image>
                 </view>
-                
+                <view class="right">
+                    <view class="username-row">
+                        <label class="username">{{item.username}}</label>
+                        <label class="time">{{item.creatTime}}</label>
+                    </view>
+                    <view>
+                        <text>{{item.commentDetail}}</text>
+                    </view>
+                    <!-- 判断是否存在子级评论 -->
+                    <view wx:if="{{item.replyList.length != 0}}">
+                        <!-- 下面是子级评论内容 -->
+                        <view wx:for="{{item.replyList}}" wx:for-item="childItem" wx:key="index">
+                            <view class="child-comment">
+                                <view class="left">
+                                    <image class="portrait" src="{{childItem.portrait}}"></image>
+                                </view>
+                                <view class="right">
+                                    <view class="username-row">
+                                        <label class="username">{{childItem.username}}</label>
+                                        <label class="time">{{childItem.creatTime}}</label>
+                                    </view>
+                                    <view>
+                                        <text class="at">@{{childItem.toUsername}}：</text>
+                                        <text>{{childItem.replyDetail}}</text>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
             </view>
-
         </view>
-    
     </view>
 </view>
