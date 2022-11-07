@@ -1,4 +1,29 @@
 <!--components/comment/comment.wxml-->
+
 <view class="container">
-    <image src="{{commentList[0].portrait}}"></image>
+    <view class="comment-title">评论 {{comment.num}}</view>
+    <view class="comment-content">
+        <view wx:for="{{commentList}}" wx:key="index">
+            <view class="parent-comment">
+                <view class="info">
+                    <view class="left">
+                        <image src="{{item.portrait}}"></image>
+                    </view>
+                    <view class="right">
+                        <view class="username-row">
+                            <label class="username">{{item.username}}</label>
+                            <label class="time">{{item.creatTime}}</label>
+                        </view>
+                        <view>
+                            <text>{{item.commentDetail}}</text>
+                        </view>
+                    </view>
+                    
+                </view>
+                
+            </view>
+
+        </view>
+    
+    </view>
 </view>

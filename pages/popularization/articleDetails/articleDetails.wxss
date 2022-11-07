@@ -39,11 +39,4 @@
     margin: 20rpx 0;
 }
 /* 评论 */
-.comment-container{
 
-}
-.comment-title {
-    font-size: 32rpx;
-    font-weight: 600;
-    /* color: red; */
-}

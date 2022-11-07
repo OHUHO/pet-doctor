@@ -43,16 +43,16 @@ Page({
         "messageId": 22,
         "userId": "220118CK3F6DGSCH",
         "username": "Aubuary",
-        "portrait": "/images/be/grill.jpeg",
+        "portrait": "/images/be/6.jpeg",
         "creatTime": "2022-03-09 16:06:06",
-        "commentDetail": "扭转乾坤",
+        "commentDetail": "微信小程序开发，宠物医生主要包含医生和科普两个大的板块。",
         "replyList": [
           {
             "replyId": 34,
             "commentId": 23,
             "userId": "220118CK3F6DGSCH",
             "username": "Aubuary",
-            "portrait": "/images/be/6.jpeg",
+            "portrait": "/images/be/grill.jpeg",
             "creatTime": "2022-03-09 16:07:07",
             "replyDetail": "冲冲冲！！！"
           },
