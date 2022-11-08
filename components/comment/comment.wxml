@@ -2,6 +2,7 @@
 <!-- 评论组件 -->
 <view class="container">
     <view class="comment-title">评论 {{commentNum}}</view>
+    <!-- 评论框。下面展示三条评论和查看全部评论（弹窗） -->
     <view class="comment-content">
         <!-- 下面是父级评论内容 -->
         <view wx:for="{{commentList}}" wx:key="index">
