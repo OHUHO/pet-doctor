@@ -1,2 +1,4 @@
 <!--pages/hospital/hospital.wxml-->
-
+<view style="margin-top: 500rpx">
+    <input placeholder="输入评论"/>
+</view>

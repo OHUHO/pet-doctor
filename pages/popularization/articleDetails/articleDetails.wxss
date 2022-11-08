@@ -3,6 +3,7 @@
     display: fle;
     flex-direction: column;
     margin: 0 20rpx;
+    padding-bottom: 100rpx;
 }
 .title {
     font-size: 36rpx;
@@ -38,5 +39,47 @@
     color: #868585;
     margin: 20rpx 0;
 }
-/* 评论 */
-
+/* 页脚 */
+.footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    border-top: 2rpx solid rgb(236, 235, 235);
+    height: 90rpx;
+    width: 100%;
+}
+.footer-box {
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 60rpx;
+}
+.input{
+    height: 70rpx;
+    /* width: 40%; */
+    width: 300rpx;
+    border-radius: 40rpx;
+    display: flex;
+    align-items: center;
+    padding-left: 30rpx;
+    font-size: 28rpx;
+    color: #868585;
+    /* background-color: red; */
+    background-color: whitesmoke;
+}
+.goods-coll{
+    width: 300rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.goods-coll icon {
+    font-size: 50rpx;
+    color: #868585;
+    width: 100rpx;
+    display: flex;
+    flex-direction: row-reverse;
+}

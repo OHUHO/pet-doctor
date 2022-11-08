@@ -16,3 +16,14 @@
         commentList="{{commentList}}">
     </comment-component>
 </view>
+
+<view class="footer">
+    <view class="footer-box">
+        <view class="input">输入评论</view>
+        <view class="goods-coll">
+            <icon class="iconfont icon-zans"></icon>
+            <icon class="iconfont icon-shoucang2"></icon>
+            <icon class="iconfont icon-zhuanfa"></icon>
+        </view>
+    </view>
+</view>
