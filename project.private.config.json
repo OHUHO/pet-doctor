@@ -42,6 +42,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/popularization/videoDetails/videoDetails",
+          "query": "videoId=2",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
