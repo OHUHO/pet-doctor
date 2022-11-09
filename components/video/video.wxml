@@ -1,18 +1,18 @@
 <!--components/video/video.wxml-->
 <view class="content">
   <view class="left">
-    <block wx:for="{{list}}" wx:key="index">
+    <block wx:for="{{videoList}}" wx:key="index">
       <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
     </block>
   </view>
   <view class="right">
-    <block wx:for="{{list}}" wx:key="index">
+    <block wx:for="{{videoList}}" wx:key="index">
       <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
     </block>
   </view>
 </view>
 <template name="item">
-  <view class="item">
+  <view class="item" data-id="{{id}}" bindtap="videoDetails">
     <image class="item-img" src="{{url}}" mode="widthFix"></image>
     <view class="item-title-box">
       <navigator url="url" class="item-title">{{title}}</navigator>

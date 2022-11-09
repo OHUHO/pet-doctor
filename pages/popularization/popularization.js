@@ -33,6 +33,58 @@ Page({
       {
         name: '视频'
       }
+    ],
+
+    // 需要传递给 video 组件的数据
+    videoList:[
+      {
+        id:1,
+        name: '昵称',
+        num: '99',
+        title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
+        url: '/images/be/1.jpg',
+        avatar: '/images/be/6.jpeg'
+      },
+      {
+        id:2,
+        name: '昵称2',
+        num: '99',
+        title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
+        url: '/images/be/4.png',
+        avatar: '/images/be/8.jpeg'
+      },
+      {
+        id:3,
+        name: '昵称3',
+        num: '99',
+        title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
+        url: '/images/be/2.jpg',
+        avatar: '/images/be/7.jpeg'
+      },
+      {
+        id:4,
+        name: '昵称4',
+        num: '99',
+        title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
+        url: '/images/be/3.jpg',
+        avatar: '/images/be/6.jpeg'
+      },
+      {
+        id:5,
+        name: '昵称5',
+        num: '99',
+        title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
+        url: '/images/be/6.jpeg',
+        avatar: '/images/be/grill.jpeg'
+      },
+      {
+        id:6,
+        name: '昵称6',
+        num: '99',
+        title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
+        url: '/images/be/8.jpeg',
+        avatar: '/images/be/8.jpeg'
+      },
     ]
 
   },

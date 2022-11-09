@@ -42,7 +42,7 @@
             bindrefresherrefresh="refresherpulling" bindscrolltolower="handleTolower">
             <view class="swiper-item">
                 <!-- 视频页面 -->
-                <video-component></video-component>
+                <video-component videoList="{{videoList}}"></video-component>
             </view>
         </scroll-view>
     </swiper-item>
