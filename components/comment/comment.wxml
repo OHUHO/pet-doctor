@@ -20,10 +20,20 @@
                 <view class="right">
                     <view class="username-row">
                         <label class="username">{{item.username}}</label>
-                        <label class="time">{{item.creatTime}}</label>
+                        <!-- <label class="time">{{item.creatTime}}</label> -->
                     </view>
                     <view>
                         <text>{{item.commentDetail}}</text>
+                    </view>
+                    <view class="time-comment-goods">
+                        <view class="time">
+                            <label>{{item.creatTime}}</label>
+                        </view>
+                        <view class="comment-goods">
+                            <!-- <icon class="iconfont icon-changyong_huifu"></icon> -->
+                            <!-- <icon class="iconfont icon-zans"></icon> -->
+                            <image src="/images/add.png"></image>
+                        </view>
                     </view>
                     <!-- 判断是否存在子级评论 -->
                     <view wx:if="{{item.replyList.length != 0}}">
@@ -36,7 +46,7 @@
                                 <view class="right">
                                     <view class="username-row">
                                         <label class="username">{{childItem.username}}</label>
-                                        <label class="time">{{childItem.creatTime}}</label>
+                                        <!-- <label class="time">{{childItem.creatTime}}</label> -->
                                     </view>
                                     <view>
                                         <text class="at">@{{childItem.toUsername}}：</text>
