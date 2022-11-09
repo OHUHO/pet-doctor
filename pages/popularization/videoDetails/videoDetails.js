@@ -141,15 +141,7 @@ Page({
     }
 
   },
-  touchStart(e) {
-    let touchStartingY = this.data.touchStartingY
-    this.touchStartTime = e.timeStamp
-    touchStartingY = e.touches[0].clientY
-    console.log(touchStartingY)
-    this.setData({
-      touchStartingY: touchStartingY
-    })
-  },
+
   touchMove(e) {
     this.videoChange(e)
   },
@@ -199,6 +191,16 @@ Page({
       })
     }
   },
+
+  touchStart(e) {
+    let touchStartingY = this.data.touchStartingY
+    this.touchStartTime = e.timeStamp
+    touchStartingY = e.touches[0].clientY
+    console.log(touchStartingY)
+    this.setData({
+      touchStartingY: touchStartingY
+    })
+  },
   touchEnd(e) {
     console.log('------touchEnd------')
     console.log(e)
@@ -209,9 +211,7 @@ Page({
     console.log('------touchCancel------')
     console.log(e)
   },
-  listenerLogin: function () {
-    // this.toast.showToast('恭喜你，获得了toast');
-  },
+
   createAnimation(direction, index) {
     // direction为-1，向上滑动，animationImage1为(index)的poster，animationImage2为(index+1)的poster
     // direction为1，向下滑动，animationImage1为(index-1)的poster，animationImage2为(index)的poster
@@ -230,129 +230,11 @@ Page({
       currentTranslateY: currentTranslateY
     })
   },
-  showTalks: function (e) {
-    // 加载数据'
-    this.setData({
-      contentId: e.currentTarget.dataset.videoid,
-      commnetNum: e.currentTarget.dataset.commnetnum
-    })
-    console.log(e)
-    this.getCommentList();
 
-    // 设置动画内容为：使用绝对定位显示区域，高度变为100%
-    this.animationTwo.bottom("0rpx").height("100%").step()
-    this.setData({
-      talksAnimationData: this.animationTwo.export(),
-      animationShow: true
-    })
-  },
 
-  hideTalks: function () {
-    // 设置动画内容为：使用绝对定位隐藏整个区域，高度变为0
-    this.animationTwo.bottom("-100%").height("0rpx").step()
-    this.setData({
-      commentList: [],
-      talksAnimationData: this.animationTwo.export(),
-      animationShow: false,
-    })
-    this.vvideo.play()
-  },
-  
-  addVideoLike: function () { // 点赞视频
-    var that = this;
-    const params = {
-      accessToken: app.globalData.token,
-      evaType: 'content',
-      id: that.data.contentId,
-      likeFlag: 1
-    }
-    const index = that.data.videoIndex
-    const videosList = "videos[" + index + "].isLike"
-    const likenum = "videos[" + index + "].likenum"
-    const like = that.data.likeNum
-    console.log(likenum, 'likenumlikenumlikenumlikenum')
-    Http.HttpRequst(false, '/api/lecture/addUserLike?accessToken=' + params.accessToken + '&evaType=content' + '&id=' + params.id + '&likeFlag=1', false, '', params, 'POST', false, function (res) {
-      console.log(res.code == 102, '66')
-      if (res.code == 102) {
-        that.setData({
-          [videosList]: res.dataObject,
-          [likenum]: parseInt(like) + parseInt(1)
-        })
-      } else if (res.code == 101) {
-        console.log(res.value)
-      } else {
 
-      }
-    })
-  },
-  /**
-   * 获取视频评论数据
-   */
- /*  getCommentList: function (e) { //
-    wx.showNavigationBarLoading();
-    const params = {
-      pageSize: 10,
-      nowPage: this.data.pageNo,
-      contId: this.data.contentId,
-      accessToken: app.globalData.token
-    }
-    const that = this
-    Http.HttpRequst(false, '/api/lecture/getCommentList', false, '', params, 'get', false, function (res) {
-      console.log(res.code == 102, '66')
-      if (res.code == 102) {
-        if (res.dataObject.list.length < that.data.rows) {
-          that.setData({
-            commentList: that.data.commentList.concat(res.dataObject.list),
-            totalCount: res.dataObject.totalCount
-          })
-          that.setData({
-            hasmoreData: true,
-            hiddenloading: false,
-            loaderMore: false
-          })
-        } else {
-          that.setData({
-            commentList: that.data.commentList.concat(res.dataObject.list),
-            totalCount: res.dataObject.totalCount
-          })
-        }
-        if (that.data.pageNo && res.dataObject.list.length == 0) {
-          that.setData({
-            nodata: true
-          })
-        }
-      } else if (res.code == 1001) {
 
-      }
-    })
-  }, */
-  /**
-   * 获取用户信息
-   */
-  getOwnInfo: function () {
-    var params = {
-      accessToken: app.globalData.token
-    }
-    Http.HttpRequst(false, '/api/lecture/getOwnInfo', false, '', params, 'get', false, function (res) {
-      if (res.code == 102) {
-        app.globalData.userId = res.dataObject.lecturerId
-      } else if (res.code == 1001) {
 
-      }
-    })
-  },
-  
-  contentInput: function (e) {
-    this.setData({
-      inputValue: e.detail.value
-    })
-  },
-  /**
-   * 点击评论视频
-   */
-  addComment: function () {
-
-  },
   /**
    * 点击头像关注
    */
@@ -364,16 +246,7 @@ Page({
   /**
    * 悬赏弹框组件
    */
-  onShowModal: function (e) {
-    // 显示弹框
-    this.setData({
-      addingText: true,
-      conid: e.currentTarget.dataset.conid,
-      lecid: e.currentTarget.dataset.lecid,
-      indexVideo: e.currentTarget.dataset.index,
-      rewardNum: e.currentTarget.dataset.rewardnum
-    })
-  },
+
   onInputCancel: function () {
     // 隐藏弹框
     console.log(55566)
@@ -382,6 +255,7 @@ Page({
     })
   }
 })
+
 function throttle(fn, delay) {
   var timer = null;
   return function () {
