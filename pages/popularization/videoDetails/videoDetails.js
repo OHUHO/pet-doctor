@@ -11,10 +11,6 @@ Page({
   data: {
     percent: 1,
     current: 0,
-    autoplay: true,
-    controls: false,
-    showPlayBtn: false,
-    showProgress: false,
     playState: true,
     animationShow: false,
     currentTranslateY: 0,
@@ -68,7 +64,6 @@ Page({
       }
     ],
     videoIndex: 0,
-    objectFit: "contain",
     totalCount: '',
     hasmoreData: false,
     loaderMore: true,

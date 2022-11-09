@@ -22,13 +22,13 @@
         bindtouchend="touchEnd" 
         bindtouchcancel="touchCancel" 
         binderror="binderror" 
-        autoplay="{{autoplay}}"
-        objectFit="cover" 
+        controls="{{false}}"
+        autoplay="{{true}}"
+        object-fit="fill" 
         hidden="{{animationShow}}" 
         src="{{videos[videoIndex].videoUrl}}" 
-        bindplay="bindplay"
-        controls="{{controls}}" 
-        loop="true">
+        bindplay="bindplay" 
+        loop="{{false}}">
 
         <!-- 页面的工具栏 -->
         <cover-view class="tools">
