@@ -1,4 +1,14 @@
 <!--pages/hospital/hospital.wxml-->
 <view style="margin-top: 500rpx">
-    <input placeholder="输入评论"/>
+    <text bindtap="ShowInput">点击出现input框和键盘</text>
+
+    <!-- 点击 上面的出现input框 -->
+    <view class="input-section" wx:if="{{isShowInput}}">
+        <input class='input_input' model:value="{{inputmessage}}" focus="auto" placeholder="请输入内容"
+            bindinput='bindInputMsg' bindblur="onHideInput" confirm-type="send" bindconfirm="sendTextMsg" />
+        <view style="height:110rpx;width:170rpx;display:flex; align-items: center;justify-content: center;">
+            <button class="send_button" size="mini" bindtap="add">添加</button>
+        </view>
+    </view>
+
 </view>
