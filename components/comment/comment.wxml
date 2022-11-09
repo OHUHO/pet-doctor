@@ -30,9 +30,8 @@
                             <label>{{item.creatTime}}</label>
                         </view>
                         <view class="comment-goods">
-                            <!-- <icon class="iconfont icon-changyong_huifu"></icon> -->
-                            <!-- <icon class="iconfont icon-zans"></icon> -->
-                            <image src="/images/add.png"></image>
+                            <image src="/images/comment.png"></image>
+                            <image src="/images/good.png"></image>
                         </view>
                     </view>
                     <!-- 判断是否存在子级评论 -->
@@ -51,6 +50,15 @@
                                     <view>
                                         <text class="at">@{{childItem.toUsername}}：</text>
                                         <text>{{childItem.replyDetail}}</text>
+                                    </view>
+                                    <view class="time-comment-goods">
+                                        <view class="time">
+                                            <label>{{item.creatTime}}</label>
+                                        </view>
+                                        <view class="comment-goods">
+                                            <image src="/images/comment.png"></image>
+                                            <image src="/images/good.png"></image>
+                                        </view>
                                     </view>
                                 </view>
                             </view>

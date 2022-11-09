@@ -17,7 +17,7 @@ Page({
 
       views: 44,
       goods: 120,
-      time: "2022-11-06 13:46"
+      time: "11-06 13:46"
 
     },
 
@@ -32,7 +32,7 @@ Page({
         "userId": "220118CK3F6DGSCH",
         "username": "用户1",
         "portrait": "/images/be/6.jpeg",
-        "creatTime": "2022-03-09 16:06:06",
+        "creatTime": "03-09",
         "commentDetail": "微信小程序开发，宠物医生主要包含医生和科普两个大的板块。",
         "replyList": [
           {
@@ -42,7 +42,7 @@ Page({
             "username": "用户2",
             "portrait": "/images/be/grill.jpeg",
             "toUsername": "用户1",
-            "creatTime": "2022-03-09 16:07:07",
+            "creatTime": "03-09",
             "replyDetail": "冲冲冲！！！"
           },
           {
@@ -52,7 +52,7 @@ Page({
             "username": "用户3",
             "portrait": "/images/be/8.jpeg",
             "toUsername": "用户1",
-            "creatTime": "2022-11-06 11:06:06",
+            "creatTime": "11-06",
             "replyDetail": "宠物医生来了"
           }
         ]
@@ -63,7 +63,7 @@ Page({
         "userId": "220118CK3F6DGSCH",
         "username": "用户4",
         "portrait": "/images/be/7.jpeg",
-        "creatTime": "2022-11-06 14:00:00",
+        "creatTime": "11-06",
         "commentDetail": "再来一条评论",
         "replyList": [
           {
@@ -73,7 +73,7 @@ Page({
             "username": "用户2",
             "portrait": "/images/be/grill.jpeg",
             "toUsername": "用户4",
-            "creatTime": "2022-11-06 14:01:01",
+            "creatTime": "11-06",
             "replyDetail": "回复一评论"
           }
         ]
@@ -84,7 +84,7 @@ Page({
         "userId": "220118CK3F6DGSCH",
         "username": "用户3",
         "portrait": "/images/be/8.jpeg",
-        "creatTime": "2022-11-06 14:01:01",
+        "creatTime": "11-06",
         "commentDetail": "时间一直倒数着《倒数》—— 邓紫棋",
         "replyList": []
       },
@@ -94,7 +94,7 @@ Page({
         "userId": "220118CK3F6DGSCH",
         "username": "用户3",
         "portrait": "/images/be/8.jpeg",
-        "creatTime": "2022-11-06 14:01:01",
+        "creatTime": "11-06",
         "commentDetail": "再来一条评论",
         "replyList": [
           {
@@ -104,7 +104,7 @@ Page({
             "username": "用户1",
             "portrait": "/images/be/6.jpeg",
             "toUsername": "用户3",
-            "creatTime": "2022-11-06 14:01:01",
+            "creatTime": "11-06",
             "replyDetail": "回复00"
           },
           {
@@ -114,7 +114,7 @@ Page({
             "username": "用户4",
             "portrait": "/images/be/7.jpeg",
             "toUsername": "用户1",
-            "creatTime": "2022-11-06 14:01:01",
+            "creatTime": "11-06",
             "replyDetail": "回复01"
           }
         ]

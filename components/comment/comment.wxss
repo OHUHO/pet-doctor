@@ -61,20 +61,22 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: yellow;
+    margin-top: 8rpx;
+    /* background-color: yellow; */
 }
 .time-comment-goods .time {
     font-size: 24rpx;
     color: #868585;
+
 }
 .comment-goods {
-    height: 100%;
-    width: 200rpx;
-    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
 }
 .comment-goods image{
-    width: 20rpx;
-    height: 20rpx;
+    width: 34rpx;
+    height: 34rpx;
+    margin-left: 50rpx;
     /* background-color: green; */
 }
 
