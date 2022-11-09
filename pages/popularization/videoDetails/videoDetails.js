@@ -37,7 +37,7 @@ Page({
       {
         videoUrl: "http://video.microc.cn/dG1wL3d4MzkwNjg3YjY3OTZjZTMzYS5vNnpBSnMzYTJqaDJHUWRGVllDV2JhaHhjTUFzLkFaeGE2d1NIVTV3cjkyNGFlOGIyMjMxYTgwNjYyOTVhZjY2YTJjN2VjY2MwLm1wNA==",
         durations: 10,
-        poster: "https://p3.pstatp.com/large/131040001488de047292a.jpg",
+        poster: "/images/be/4.png",
         likenum: 10,
         commnetnum: '20',
         rewardNum: '6'
@@ -45,7 +45,7 @@ Page({
       {
         videoUrl: "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0200fce0000bg36q72j2boojh1t030g&line=0",
         durations: 10,
-        poster: "https://p99.pstatp.com/large/12c5c0009891b32e947b7.jpg",
+        poster: "/images/be/6.jpeg",
         likenum: 10,
         commnetnum: '20',
         rewardNum: '6'
@@ -53,7 +53,7 @@ Page({
       {
         videoUrl: "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0300fd10000bfrb9mlpimm72a92fsj0&line=0",
         durations: 10,
-        poster: "https://p99.pstatp.com/large/12246000525d4c87900e7.jpg",
+        poster: "/images/be/grill.jpeg",
         likenum: 10,
         commnetnum: '20',
         rewardNum: '6'
@@ -262,17 +262,7 @@ Page({
     })
     this.vvideo.play()
   },
-  /// 双击
-  doubleTap: function (e) {
-    var that = this
-    // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
-    that.setData({
-      contentId: e.currentTarget.dataset.videoid, // 点赞内容id
-      videoIndex: e.currentTarget.dataset.index,
-      likeNum: e.currentTarget.dataset.likenum
-    })
-    that.addVideoLike()
-  },
+  
   addVideoLike: function () { // 点赞视频
     var that = this;
     const params = {
@@ -303,7 +293,7 @@ Page({
   /**
    * 获取视频评论数据
    */
-  getCommentList: function (e) { //
+ /*  getCommentList: function (e) { //
     wx.showNavigationBarLoading();
     const params = {
       pageSize: 10,
@@ -340,7 +330,7 @@ Page({
 
       }
     })
-  },
+  }, */
   /**
    * 获取用户信息
    */
@@ -356,28 +346,7 @@ Page({
       }
     })
   },
-  goHome: function () {
-    wx.redirectTo({
-      url: '/pages/home/home'
-    })
-  },
-  goFollow: function () {
-    wx.redirectTo({
-      url: '/pages/follow/follow'
-    })
-  },
-  goSearch: function () {
-    wx.redirectTo({
-      url: '/pages/search/search'
-    })
-  },
-  goUserHome: function (e) {
-    var lecrid = e.currentTarget.dataset.lecturerid
-    app.globalData.userId = lecrid
-    wx.navigateTo({
-      url: '/pages/home/home'
-    })
-  },
+  
   contentInput: function (e) {
     this.setData({
       inputValue: e.detail.value
