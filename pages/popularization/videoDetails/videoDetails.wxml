@@ -31,86 +31,86 @@
         loop="{{false}}">
 
         <!-- 页面的工具栏 -->
-        <cover-view class="tools">
+        <view class="tools">
             <!-- 用户头像 -->
-            <cover-view class='user-image'>
+            <view class='user-image'>
                 <!-- 默认头像 -->
-                <cover-image class="userinfo-avatar" 
+                <image class="userinfo-avatar" 
                     wx:if="{{!videos[videoIndex].icon && !userData.headPic}}"
                     data-lecturerId="{{videos[videoIndex].lecturerId}}" 
                     catchtap='goUserHome'
                     src="/images/be/8.jpeg">
-                </cover-image>
-                <cover-image class="userinfo-avatar" 
+                </image>
+                <image class="userinfo-avatar" 
                     wx:elif="{{!videos[videoIndex].icon}}"
                     data-lecturerId="{{videos[videoIndex].lecturerId}}" 
                     catchtap='goUserHome'
                     src="{{userData.headPic}}">
-                </cover-image>
-                <cover-image class="userinfo-avatar" 
+                </image>
+                <image class="userinfo-avatar" 
                     wx:else data-lecturerId="{{videos[videoIndex].lecturerId}}"
                     catchtap='goUserHome' 
                     src="{{videos[videoIndex].icon}}">
-                </cover-image>
+                </image>
                 <!-- 未关注 -->
-                <cover-image class="userinfo-add" 
+                <image class="userinfo-add" 
                     wx:if="{{videos[videoIndex].isfans == 0}}" 
                     src="/images/video/add.png"
                     data-index="{{videoIndex}}" 
                     data-lecturerId="{{videos[videoIndex].lecturerId}}"
                     catchtap='addLecturerFans'>
-                </cover-image>
+                </image>
                 <!-- 关注 -->
-                <cover-image class="userinfo-add" 
+                <image class="userinfo-add" 
                     wx:else src="/images/video/guanzhu.png" 
                     data-index="{{videoIndex}}"
                     data-lecturerId="{{videos[videoIndex].lecturerId}}" 
                     catchtap='delLecturerFans'>
-                </cover-image>
-            </cover-view>
+                </image>
+            </view>
 
             <!-- 点赞视频 -->
-            <cover-view>
-                <cover-image class="icon right-icon" 
+            <view>
+                <image class="icon right-icon" 
                     data-likeNum="{{videos[videoIndex].likenum}}"
                     data-index="{{videoIndex}}" 
                     data-videoId="{{videos[videoIndex].contentId}}"
                     wx:if="{{videos[videoIndex].isLike == 0}}" 
                     src='/images/video/start.png'>
-                </cover-image>
-                <cover-image class="icon right-icon" 
+                </image>
+                <image class="icon right-icon" 
                     wx:else src='/images/video/active.png'>
-                </cover-image>
-                <cover-view class="text">{{videos[videoIndex].likenum}}</cover-view>
-            </cover-view>
+                </image>
+                <view class="text">{{videos[videoIndex].likenum}}</view>
+            </view>
             
             <!-- 评论 -->
-            <cover-view catchtap='showTalks' 
+            <view catchtap='showTalks' 
                 data-videoId="{{videos[videoIndex].contentId}}"
                 data-commnetnum="{{videos[videoIndex].commnetnum}}">
-                <cover-image class="icon right-icon" src='/images/video/content.png'></cover-image>
-                <cover-view class="text">{{videos[videoIndex].commnetnum}}</cover-view>
-            </cover-view>
+                <image class="icon right-icon" src='/images/video/content.png'></image>
+                <view class="text">{{videos[videoIndex].commnetnum}}</view>
+            </view>
 
-        </cover-view>
+        </view>
 
         <!-- 进度条  -->
-        <cover-view class="jindu-back"></cover-view>
-        <cover-view class="jindu" style='width: {{percent}}%'></cover-view>
+        <view class="jindu-back"></view>
+        <view class="jindu" style='width: {{percent}}%'></view>
 
         <!-- 描述  -->
-        <cover-view class="desc">
-            <cover-view class='desc-content'>
-                <cover-image class="icon huati" src='/images/video/huati.png'></cover-image>
-                <cover-view class="desc-text" 
+        <view class="desc">
+            <view class='desc-content'>
+                <image class="icon huati" src='/images/video/huati.png'></image>
+                <view class="desc-text" 
                     wx:key="index" 
                     wx:for="{{videos[videoIndex].tagList}}">
-                    {{item.tagName}}</cover-view>
-            </cover-view>
-            <cover-view class='desc-content tag'>
-                <cover-view class="desc-text">{{videos[videoIndex].description}}</cover-view>
-            </cover-view>
-        </cover-view>
+                    {{item.tagName}}</view>
+            </view>
+            <view class='desc-content tag'>
+                <view class="desc-text">{{videos[videoIndex].description}}</view>
+            </view>
+        </view>
 
     </video>
 
