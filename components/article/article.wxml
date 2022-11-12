@@ -24,14 +24,14 @@
             </view>
             <view wx:elif="{{item.imgSrc.length==1}}" class="content-img1-box">
                 <text class="content-img1">{{item.content}}</text>
-                <image class="img-1" src="{{item.imgSrc[0]}}"></image>
+                <image class="img-1" src="{{item.imgSrc[0]}}" mode="aspectFill"></image>
             </view>
             <view wx:else class="content-img3-box">
                 <text class="content-img3">{{item.content}}</text>
                 <view class="img3">
-                    <image src="{{item.imgSrc[0]}}"></image>
-                    <image src="{{item.imgSrc[1]}}"></image>
-                    <image src="{{item.imgSrc[2]}}"></image>
+                    <image src="{{item.imgSrc[0]}}" mode="aspectFill"></image>
+                    <image src="{{item.imgSrc[1]}}" mode="aspectFill"></image>
+                    <image src="{{item.imgSrc[2]}}" mode="aspectFill"></image>
                 </view>
             </view>
         </view>

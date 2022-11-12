@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "search-component": "/components/search/search",
-    "recommend-component": "/components/recommend/recommend",
+    "article-component": "/components/article/article",
     "video-component": "/components/video/video"
   },
   "navigationStyle": "custom"
