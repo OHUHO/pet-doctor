@@ -35,6 +35,62 @@ Page({
       }
     ],
 
+    // 需要传递给 article 组件的数据
+    articleList:[
+      {
+        title: '这是一个标题',
+        imgSrc:'url',
+        username: '用户名',
+        
+        content:'测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
+        imgSrc:["/images/cat.png"],
+        videoSrc:"/images/cat.png",
+        
+        views:44,
+        goods:120,
+  
+      },
+      {
+        title: '这是一个标题',
+        imgSrc:'url',
+        username: '用户名',
+        
+        content:'测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
+        imgSrc:["/images/pets/1.png","/images/pets/2.png","/images/pets/3.png"],
+        videoSrc:"/images/cat.png",
+        
+        views:44,
+        goods:120,
+  
+      },
+      {
+        title: '这是一个标题',
+        imgSrc:'url',
+        username: '用户名',
+        
+        content:'测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
+        imgSrc:[],
+        videoSrc:"/images/cat.png",
+        
+        views:44,
+        goods:120,
+  
+      },
+      {
+        title: '这是一个标题',
+        imgSrc:'url',
+        username: '用户名',
+        
+        content:'测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
+        imgSrc:["/images/pets/2.png"],
+        videoSrc:"/images/cat.png",
+        
+        views:44,
+        goods:120,
+  
+      },
+    ],
+    
     // 需要传递给 video 组件的数据
     videoList:[
       {

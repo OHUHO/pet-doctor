@@ -22,7 +22,7 @@
             bindscrolltolower="handleTolower">
             <view class="swiper-item">
                 <!-- 推荐页面 -->
-                <article-component></article-component>
+                <article-component articleList="{{articleList}}"></article-component>
             </view>
         </scroll-view>
     </swiper-item>
@@ -32,7 +32,7 @@
             bindrefresherrefresh="refresherpulling" bindscrolltolower="handleTolower">
             <view class="swiper-item">
                 <!-- 文章页面 -->
-                <article-component></article-component>
+                <article-component articleList="{{articleList}}"></article-component>
             </view>
         </scroll-view>
     </swiper-item>

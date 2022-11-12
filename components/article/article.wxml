@@ -7,7 +7,7 @@
 -->
 
 <view class="container">
-    <view wx:for="{{dataList}}" 
+    <view wx:for="{{articleList}}" 
         wx:key="index" 
         class="box"  
         bindtap="tranArticleDetails" 
