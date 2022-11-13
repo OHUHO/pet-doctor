@@ -1,129 +1,110 @@
 <!--pages/popularization/videoDetails/videoDetails.wxml-->
 
-<wxs src="/utils/utils.wxs" module="tools"></wxs>
-<view class="container-video" bindtap="changePlayStatus">
-    <!-- <view class='content' wx:if="{{videos.length!=0}}"> -->
-    <view class="animation-wrapper" animation="{{animation}}">
-        <block wx:for="{{videos}}" wx:key="{{item.poster}}">
-            <view class="animation-image-wrapper">
-                <image class="animation-image" src="{{item.poster}}"></image>
-            </view>
-        </block>
-    </view>
+<view class="video-container">
 
-    <!-- <video class="video" 
-            bindtimeupdate="bindtimeupdate" 
-            id="kdvideo" 
-            bindtouchstart="touchStart" 
-    -->
-    <video class="video" 
-        id="kdvideo" 
-        bindtouchstart="touchStart"
-        bindtouchend="touchEnd" 
-        bindtouchcancel="touchCancel" 
-        binderror="binderror" 
-        controls="{{false}}"
-        autoplay="{{true}}"
-        object-fit="fill" 
-        hidden="{{animationShow}}" 
-        src="{{videos[videoIndex].videoUrl}}" 
-        bindplay="bindplay" 
-        loop="{{false}}">
+	<video id="myVideo" 
+		poster="{{poster}}"
+		src="{{src}}" 
+		binderror="videoErrorCallback" 
+		danmu-list="{{danmuList}}" 
+		enable-danmu 
+		danmu-btn="{{danmuBtn}}"
+		controls 
+    	object-fit="{{contain}}"
+		bindtap="doubleClickPlayAndPause">
+	</video>
 
-        <!-- 页面的工具栏 -->
-        <view class="tools">
-            <!-- 用户头像 -->
-            <view class='user-image'>
-                <!-- 默认头像 -->
-                <image class="userinfo-avatar" 
-                    wx:if="{{!videos[videoIndex].icon && !userData.headPic}}"
-                    data-lecturerId="{{videos[videoIndex].lecturerId}}" 
-                    catchtap='goUserHome'
-                    src="/images/be/8.jpeg">
-                </image>
-                <image class="userinfo-avatar" 
-                    wx:elif="{{!videos[videoIndex].icon}}"
-                    data-lecturerId="{{videos[videoIndex].lecturerId}}" 
-                    catchtap='goUserHome'
-                    src="{{userData.headPic}}">
-                </image>
-                <image class="userinfo-avatar" 
-                    wx:else data-lecturerId="{{videos[videoIndex].lecturerId}}"
-                    catchtap='goUserHome' 
-                    src="{{videos[videoIndex].icon}}">
-                </image>
-                <!-- 未关注 -->
-                <image class="userinfo-add" 
-                    wx:if="{{videos[videoIndex].isfans == 0}}" 
-                    src="/images/video/add.png"
-                    data-index="{{videoIndex}}" 
-                    data-lecturerId="{{videos[videoIndex].lecturerId}}"
-                    catchtap='addLecturerFans'>
-                </image>
-                <!-- 关注 -->
-                <image class="userinfo-add" 
-                    wx:else src="/images/video/guanzhu.png" 
-                    data-index="{{videoIndex}}"
-                    data-lecturerId="{{videos[videoIndex].lecturerId}}" 
-                    catchtap='delLecturerFans'>
-                </image>
-            </view>
+	<!-- <input bindblur="bindInputBlur" class="weui-input" type="text" placeholder="在此处输入弹幕内容" />
+	<button bindtap="bindSendDanmu" class="page-body-button" type="primary" formType="submit">发送弹幕</button> -->
 
-            <!-- 点赞视频 -->
-            <view>
-                <image class="icon right-icon" 
-                    data-likeNum="{{videos[videoIndex].likenum}}"
-                    data-index="{{videoIndex}}" 
-                    data-videoId="{{videos[videoIndex].contentId}}"
-                    wx:if="{{videos[videoIndex].isLike == 0}}" 
-                    src='/images/video/start.png'>
-                </image>
-                <image class="icon right-icon" 
-                    wx:else src='/images/video/active.png'>
-                </image>
-                <view class="text">{{videos[videoIndex].likenum}}</view>
-            </view>
-            
-            <!-- 评论 -->
-            <view catchtap='showTalks' 
-                data-videoId="{{videos[videoIndex].contentId}}"
-                data-commnetnum="{{videos[videoIndex].commnetnum}}">
-                <image class="icon right-icon" src='/images/video/content.png'></image>
-                <view class="text">{{videos[videoIndex].commnetnum}}</view>
-            </view>
 
-        </view>
+	<view>
+		<scroll-view class="scroll-x" 
+			scroll-x="true" 
+			scroll-with-animation>
+			<block wx:for-items="{{tabs}}" wx:key="index">
+				<view id="{{index}}" 
+					class="item {{activeIndex == index ? 'active' : ''}}" 
+					bindtap="tabClick">
+					{{item}}
+				</view>
+			</block>
+			<block>
+				<view class="item danmu" bindtap="danmuBtn">
+					<image wx:if="{{danmuBtn}}" src="/images/danmu.png"></image>
+					<image wx:else src="/images/danmu-close.png"></image>
+				</view>
+			</block>
+		</scroll-view>
+	</view>
+	<swiper class="swiper-box" 
+		style="height:calc(100vh - 68rpx);"  
+		bindchange="change" 
+		current="{{activeIndex}}">
+		<swiper-item>
+			<scroll-view scroll-y="true" class="scroll-y">
+				<view class="introduction">
+					<!-- 用户头像和关注 -->
+					<view class="userinfo">
+						<view class="user">
+							<image src="/images/be/7.jpeg"></image>
+							<text>用户名</text>
+						</view>
+						<view class="btn">
+							+ 关注
+						</view>
+					</view>
+					<!-- 视频简介 -->
+					<view class="video-introduction">
+						<label class="label-wrapper">
+							<image src="/images/fire.png"></image>
+							<label class="label">热门</label>
+						</label>
+						<text>视频封面的图片网络资源地址或云文件ID。若 controls 属性值为 false 则设置 poster 无效</text>
+					</view>
+					<!-- 视频播放信息 -->
+					<view class="video-info">
+						<view class="view-counts">
+							<image src="/images/view-counts.png"/>
+							<text>986万</text>
+						</view>
+						<view>2022-11-10</view>
+					</view>
+					<!-- 点赞 收藏 转发等操作 -->
+					<view class="good-collect"> 
+						<view class="col">
+							<image src="/images/view-counts.png"></image>
+							<text>888</text>
+						</view>
+						<view class="col">
+							<image src="/images/view-counts.png"></image>
+							<text>9.9万</text>
+						</view>
+						<view class="col">
+							<image src="/images/view-counts.png"></image>
+							<text>88万</text>
+						</view>
+						<view class="col">
+							<image src="/images/view-counts.png"></image>
+							<text>999</text>
+						</view>
+					</view>
 
-        <!-- 进度条  -->
-        <view class="jindu-back"></view>
-        <view class="jindu" style='width: {{percent}}%'></view>
+					<!-- 推荐视频组件 -->
+                    <video-details videoRecommendList="{{videoRecommendList}}"></video-details>
 
-        <!-- 描述  -->
-        <view class="desc">
-            <view class='desc-content'>
-                <image class="icon huati" src='/images/video/huati.png'></image>
-                <view class="desc-text" 
-                    wx:key="index" 
-                    wx:for="{{videos[videoIndex].tagList}}">
-                    {{item.tagName}}</view>
-            </view>
-            <view class='desc-content tag'>
-                <view class="desc-text">{{videos[videoIndex].description}}</view>
-            </view>
-        </view>
-
-    </video>
-
-    <image class="play-btn" wx:if="{{!playState && !animationShow}}" src="/images/video/play.png"></image>
-   
-</view>
-<view class='content' wx:if="{{nodata}}">
-    <view class='tab-content-list'>
-        <view class='nodata'>
-            <image src="/images/video/data.png"></image>
-        </view>
-        <view class='center'>
-            <text>亲,没有获取到数据哦!</text>
-        </view>
-    </view>
+				</view>
+			</scroll-view>
+		</swiper-item>
+		<swiper-item>
+			<scroll-view scroll-y="true" class="scroll-y">
+				<view class="comment">
+					<!-- 评论组件 -->
+          			<comment commentNum="{{commentNum}}" 
+						commentList="{{commentList}}">
+					</comment>
+				</view>
+			</scroll-view>
+		</swiper-item>
+	</swiper>
 </view>

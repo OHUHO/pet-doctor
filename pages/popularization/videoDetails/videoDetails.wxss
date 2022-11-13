@@ -1,136 +1,157 @@
 /* pages/popularization/videoDetails/videoDetails.wxss */
 
-page {
+.video-container {
   width: 100%;
-  height: 100%;
-  position: fixed;
-}
-.container-video {
-  height: 100vh;
-  width: 100vw;
+  /* background-color: yellow; */
 }
 
-.animation-wrapper {
+video {
+  width: 100%;
+}
+
+.scroll-x{
+  white-space: nowrap;
+  border-bottom: 1px solid #e6e5e5;
+  /* border-top: 1px solid #e6e5e5; */
+  padding: 6rpx 0;
+}
+.scroll-x .item{
+  display: inline-block;
+  width: 74rpx;
+  text-align: center;
+  margin-left: 90rpx;
+  color: #828282;
+  font-size: 34rpx;
+  font-weight: 600;
+  /* background-color: #828282; */
+}
+.scroll-x .item.active{
   position: relative;
-  height: 100vh;
-  width: 100vw;
-  /* background-color: #000; */
+  color: #F9A7A7;
+  border-bottom: 6rpx solid #F9A7A7 ;
 }
-.animation-image {
-  height: 100vh;
-  width: 100vw;
-  display: block;
+/* 弹幕按钮 */
+
+.danmu {
+  position: absolute;
+  right: 60rpx;
+  bottom: auto;
+  /* background-color: red; */
 }
 
-.video {
+.danmu image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.swiper-box {}
+
+.scroll-y {
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
+  /* background-color: yellowgreen; */
 }
 
-.tools {
+
+/* 简介 */
+.introduction{
+  /* background-color: yellow; */
+  padding: 20rpx;
   display: flex;
-  position: fixed;
-  right: 5rpx;
-  bottom: 350rpx;
-  /* height: 300px; */
   flex-direction: column;
 }
-.user-image {
-  position: relative
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-.userinfo-avatar {
-  width: 100rpx;
-  height: 100rpx;
-  margin: 20rpx;
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.user image{
+  width: 70rpx;
+  height: 70rpx;
   border-radius: 50%;
 }
-
-.userinfo-add {
-  position: absolute;
-  top: 92rpx;
-  width: 46rpx;
-  height: 46rpx;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
+.user text {
+  font-size: 30rpx;
+  margin: 0 10rpx;
 }
-
-.icon {
-  width: 90rpx;
-  height: 90rpx;
-}
-
-.right-icon {
-  margin: 20rpx 25rpx 0rpx;
-}
-.text {
-  color: white;
-  /* width: 100rpx; */
-  text-align: center;
-  margin: 0rpx 20rpx;
-}
-
-.jindu {
-  position: fixed;
-  bottom: 100rpx;
-  height: 5rpx;
-  background-color: white;
-}
-
-.jindu-back {
-  position: fixed;
-  bottom: 100rpx;
-  width: 100%;
-  height: 5rpx;
-  background-color: gray;
-}
-
-.desc {
-  position: fixed;
-  left: 40rpx;
-  bottom: 158rpx;
-  width: 600rpx;
-}
-
-.desc-content {
-  display: flex;
-  align-items: center
-}
-.huati {
-  width: 23rpx;
-  height: 23rpx;
-}
-.desc-text {
-  color: white;
-  font-size: 14px;
-  padding: 0 0 0 20rpx;
-}
-
-.tag {
-  margin-top: 20rpx;
-}
-
-
-.play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 128rpx;
-  width: 128rpx;
-}
-
-
-
-.nodata {
+.btn {
+  background-color: #F9A7A7;
+  height: 50rpx;
+  width: 130rpx;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 400rpx;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  font-weight: 700;
+  color: #fff;
+}
+
+.video-introduction{
+  flex-wrap: wrap;
+  margin: 10rpx 0;
+}
+
+.label-wrapper {
+  background-color: rgb(229, 226, 226);
+  border-radius: 10rpx;
+  color: #F9A7A7;
+  margin-right: 10rpx;
+  padding: 0 10rpx;
+}
+.label-wrapper image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: -6rpx;
+
+}
+.video-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #bfbfbf;
+  font-size: 26rpx;
+}
+.view-counts{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30rpx;
+}
+.view-counts image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.good-collect{
+  display: flex;
+  flex-direction: row;
+  font-size: 20rpx;
+  color: #bfbfbf;
+  margin: 20rpx 0;
+}
+.good-collect image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+/* 评论 */
+.comment {
+  padding: 20rpx;
+  /* background-color: rgb(168, 247, 220); */
+  height: 100%;
 }
