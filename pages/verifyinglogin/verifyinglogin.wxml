@@ -1,2 +1,31 @@
 <!--pages/verifyinglogin/verifyinglogin.wxml-->
-<text>pages/verifyinglogin/verifyinglogin.wxml</text>
+<view class="verify">
+  <view class="verify-main">
+    <view class="main--title">您还未授权</view>
+    <view class="main--desc">请先授权再进行操作</view>
+    <image class="main--stateImg" src="/images/login_bg.png" />
+    <button class="main--ok" 
+      size="default" 
+      type="default" 
+      plain="default" 
+      hover-class="login--hover" 
+      hover-stop-propagation="false" 
+      open-type="getUserInfo"
+      bindgetuserinfo="bindGetUserInfo"
+    >
+      微信授权
+    </button>
+    <button class="main--cancel" 
+      size="default" 
+      type="default" 
+      plain="true" 
+      hover-class="button-hover" 
+      hover-stop-propagation="false" 
+      form-type="submit|reset" 
+      open-type="" 
+      bindtap="onBackBtn"
+    >
+      暂不授权
+    </button>
+  </view>
+</view>
