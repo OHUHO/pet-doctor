@@ -10,11 +10,11 @@
 <view class="head">
     <image class='background-image' src="/images/background-image.png"></image>
     <view class="userinfo-wrapper">
-        <view class="userinfo" wx:if="{{userInfo.username!=undefined}}">
-            <image class="userinfo-avatar" src="{{userInfo.portrait}}" mode="cover"></image>
+        <view class="userinfo" wx:if="{{userinfo.username!=undefined}}">
+            <image class="userinfo-avatar" src="{{userinfo.portrait}}" mode="cover"></image>
             <view class="userinfo-introduce">
-                <text class="userinfo-nickname">{{userInfo.username}}</text>
-                <text class="userinfo-motto">{{userInfo.motto}}</text>
+                <text class="userinfo-nickname">{{userinfo.username}}</text>
+                <text class="userinfo-motto">{{userinfo.motto}}</text>
             </view>
         </view>
         <view class="userinfo" wx:else="onLogin" bindtap="onLogin">

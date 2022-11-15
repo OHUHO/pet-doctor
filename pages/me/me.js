@@ -1,15 +1,12 @@
 // pages/me/me.js
-import { Common } from '../../api/common'
-const common = new Common()
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        userInfo: {},
-        // hasUserInfo: false,
-        // canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
+        userinfo: {},
         userData: [
             ["获赞", 944],
             ["收藏", 944],
@@ -65,10 +62,10 @@ Page({
     },
 
     isLogin() {
-        const userInfo = this.data.userInfo
-        if (!userInfo.username) {
+        const userinfo = this.data.userinfo
+        if (!userinfo.username) {
             this.setData({
-                userInfo: wx.getStorageSync('userinfo')
+                userinfo: wx.getStorageSync('userinfo')
             })
         }
 

@@ -4,9 +4,7 @@
 		<view class="title">您还未授权</view>
 		<view class="desc">请先授权再进行操作</view>
 		<image class="image" src="/images/login_bg.png" />
-		<button class="btn ok" 
-			open-type="getUserInfo" 
-			bindgetuserinfo="bindGetUserInfo">
+		<button class="btn ok" bindtap="getUserProfile">
 			微信授权
 		</button>
 		<button class="btn cancel" bindtap="onBackBtn">
