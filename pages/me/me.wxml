@@ -3,101 +3,59 @@
 	<image class='background-image' src="/images/background-image.png"></image>
 	<view class="userinfo-wrapper">
 		<view class="userinfo">
-			<block wx:if="{{canIUseOpenData}}">
-				<view class="userinfo-avatar" bindtap="">
-					<open-data type="userAvatarUrl"></open-data>
-				</view>
-				<view class="userinfo-introduce">
-					<open-data type="userNickName" class="userinfo-nickname"></open-data>
-					<text class="userinfo-motto">致力于宠物健康</text>
-				</view>
-				
-			</block>
-			<block wx:elif="{{!hasUserInfo}}">
-				<button bindtap="getUserProfile" bindcontact="getUserProfile"> 获取头像昵称 </button>
-			</block>
-			<block wx:else>
-				<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-				<view class="userinfo-introduce">
+      <view wx:if="{{userInfo.username!==undefined}}">
+        <view class="userinfo-introduce">
 					<text class="userinfo-nickname">{{userInfo.nickName}}</text>
 					<text class="userinfo-motto">致力于宠物健康</text>
 				</view>
-			</block>
+      </view>
+      <view wx:else="onLogin">
+          <button bindtap="onLogin"> 点击登录账户 </button>
+      </view>
 		</view>
+    <!-- 用户收藏点赞信息 -->
 		<view class="otherinfo">
-			<view class="col">
-				<text class="number">120</text>
-				<text>获赞</text>
-			</view>
-			<view class="col">
-				<text class="number">120</text>
-				<text>获赞</text>
-			</view>
-			<view class="col">
-				<text class="number">120</text>
-				<text>获赞</text>
+			<view class="col" wx:for="{{userData}}" wx:key="index">
+				<text class="number">{{item[1]}}</text>
+				<text>{{item[0]}}</text>
 			</view>
 		</view>
 	</view>
 </view>
+<!-- 用户宠物展示 -->
 <view class="pets">
-	<block  wx:for="{{petList}}" wx:for-item="pet">
-		<view class="pet">
-			<view class="pet-info">
-				<image class="pet-avatar" src="{{pet.img}}"></image>
-				<view class="pet-introduce">
-					<text class="pet-name">{{pet.name}}</text>
-					<view class="petinfo">
-						<text class="point"></text>
-						<text>{{pet.info1}}</text>
-					</view>
-				</view>	
-			</view>
-			<text class="pet-edit">编辑宠物</text>
-		</view>
-	</block>
+  <view class="pet" wx:for="{{petList}}" wx:key="index">
+    <view class="pet-info">
+      <image class="pet-avatar" src="{{item.img}}"></image>
+      <view class="pet-introduce">
+        <text class="pet-name">{{item.name}}</text>
+        <view class="petinfo">
+          <text class="point"></text>
+          <text>{{item.info1}}</text>
+        </view>
+      </view>	
+    </view>
+    <text class="pet-edit">编辑宠物</text>
+  </view>
 </view>
+<!-- 管理 -->
 <view class="manages">
 	<view class="manage">
 		<text class="manage-title">我的管理</text>
 		<view class="manage-items">
-			<view class="manage-item">
-				<icon class="iconfont icon-xiedaichongwu manage-img"></icon>
-				<text>我的宠物</text>
-			</view>
-			<view class="manage-item">
-				<icon class="iconfont icon-jilu manage-img"></icon>
-				<text>我的问诊</text>
-			</view>
-			<view class="manage-item">
-				<icon class="iconfont icon-shoucang1 manage-img"></icon>
-				<text>我的收藏</text>
-			</view>
-			<view class="manage-item">
-				<icon class="iconfont icon-fabujishu manage-img"></icon>
-				<text>我的发布</text>
+			<view class="manage-item" wx:for="{{myManageList}}" wx:key="index">
+				<icon class="iconfont {{item.icon}} manage-img"></icon>
+				<text>{{item.title}}</text>
 			</view>
 		</view>
 	</view>
   <view class="manage">
 		<text class="manage-title">应用管理</text>
 		<view class="manage-items">
-			<view class="manage-item">
-				<icon class="iconfont icon-shezhi manage-img"></icon>
-				<text>账号设置</text>
+			<view class="manage-item" wx:for="{{appManageList}}" wx:key="index">
+				<icon class="iconfont {{item.icon}} manage-img"></icon>
+				<text>{{item.title}}</text>
 			</view>
-			<view class="manage-item">
-				<icon class="iconfont icon-lianxikefu manage-img"></icon>
-				<text>联系客服</text>
-			</view>
-			<!-- <view class="manage-item">
-				<icon class="iconfont icon-shoucang1 manage-img"></icon>
-				<text>我的收藏</text>
-			</view>
-			<view class="manage-item">
-				<icon class="iconfont icon-fabujishu manage-img"></icon>
-				<text>我的发布</text>
-			</view> -->
 		</view>
 	</view>
 

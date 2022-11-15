@@ -6,7 +6,8 @@
     "pages/hospital/hospital",
     "pages/popularization/popularization",
     "pages/popularization/articleDetails/articleDetails",
-    "pages/popularization/videoDetails/videoDetails"
+    "pages/popularization/videoDetails/videoDetails",
+    "pages/verifyinglogin/verifyinglogin"
   ],
   "window": {
     "backgroundTextStyle": "light",
