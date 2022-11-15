@@ -24,6 +24,8 @@ page {
   position: absolute;
   top: 40%;
   text-align: center;
+  /* background-color: pink; */
+  /* opacity: 0.6; */
 }
 .userinfo{
   display: flex;
@@ -31,6 +33,7 @@ page {
   align-items: center;
   justify-content: center;
   color: #ffffff;
+  margin-top: -20rpx;
   /* background-color: red; */
 }
 .userinfo-avatar {

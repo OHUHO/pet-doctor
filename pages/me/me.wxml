@@ -1,69 +1,74 @@
 <!--pages/me/me.wxml-->
-<view class="head">
-	<image class='background-image' src="/images/background-image.png"></image>
-	<view class="userinfo-wrapper">
-		<view class="userinfo">
-      <view wx:if="{{userInfo.username!==undefined}}">
-        <view class="userinfo-introduce">
-					<text class="userinfo-nickname">{{userInfo.nickName}}</text>
-					<text class="userinfo-motto">致力于宠物健康</text>
-				</view>
-      </view>
-      <view wx:else="onLogin">
-          <button bindtap="onLogin"> 点击登录账户 </button>
-      </view>
-		</view>
-    <!-- 用户收藏点赞信息 -->
-		<view class="otherinfo">
-			<view class="col" wx:for="{{userData}}" wx:key="index">
-				<text class="number">{{item[1]}}</text>
-				<text>{{item[0]}}</text>
-			</view>
-		</view>
-	</view>
-</view>
-<!-- 用户宠物展示 -->
-<view class="pets">
-  <view class="pet" wx:for="{{petList}}" wx:key="index">
-    <view class="pet-info">
-      <image class="pet-avatar" src="{{item.img}}"></image>
-      <view class="pet-introduce">
-        <text class="pet-name">{{item.name}}</text>
-        <view class="petinfo">
-          <text class="point"></text>
-          <text>{{item.info1}}</text>
-        </view>
-      </view>	
-    </view>
-    <text class="pet-edit">编辑宠物</text>
-  </view>
-</view>
-<!-- 管理 -->
-<view class="manages">
-	<view class="manage">
-		<text class="manage-title">我的管理</text>
-		<view class="manage-items">
-			<view class="manage-item" wx:for="{{myManageList}}" wx:key="index">
-				<icon class="iconfont {{item.icon}} manage-img"></icon>
-				<text>{{item.title}}</text>
-			</view>
-		</view>
-	</view>
-  <view class="manage">
-		<text class="manage-title">应用管理</text>
-		<view class="manage-items">
-			<view class="manage-item" wx:for="{{appManageList}}" wx:key="index">
-				<icon class="iconfont {{item.icon}} manage-img"></icon>
-				<text>{{item.title}}</text>
-			</view>
-		</view>
-	</view>
-
-</view>
 
 <!-- 灯泡 -->
 <view class="war_pop">
-	<view class="box">
-		<view class="box_view"></view>
-	</view>
+    <view class="box">
+        <view class="box_view"></view>
+    </view>
+</view>
+<!-- 头像区域 -->
+<view class="head">
+    <image class='background-image' src="/images/background-image.png"></image>
+    <view class="userinfo-wrapper">
+        <view class="userinfo" wx:if="{{userInfo.username!=undefined}}">
+            <image class="userinfo-avatar" src="{{userInfo.portrait}}" mode="cover"></image>
+            <view class="userinfo-introduce">
+                <text class="userinfo-nickname">{{userInfo.username}}</text>
+                <text class="userinfo-motto">{{userInfo.motto}}</text>
+            </view>
+        </view>
+        <view class="userinfo" wx:else="onLogin" bindtap="onLogin">
+            <image class="userinfo-avatar" src="/images/be/7.jpeg" mode="cover"></image>
+            <view class="userinfo-introduce">
+                <text class="userinfo-nickname">点击登录账户</text>
+                <text class="userinfo-motto">致力于宠物健康</text>
+            </view>
+        </view>
+    
+        <!-- 用户收藏点赞信息 -->
+        <view class="otherinfo">
+            <view class="col" wx:for="{{userData}}" wx:key="index">
+                <text class="number">{{item[1]}}</text>
+                <text>{{item[0]}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 用户宠物展示 -->
+<view class="pets">
+    <view class="pet" wx:for="{{petList}}" wx:key="index">
+        <view class="pet-info">
+            <image class="pet-avatar" src="{{item.img}}"></image>
+            <view class="pet-introduce">
+                <text class="pet-name">{{item.name}}</text>
+                <view class="petinfo">
+                    <text class="point"></text>
+                    <text>{{item.info1}}</text>
+                </view>
+            </view>
+        </view>
+        <text class="pet-edit">编辑宠物</text>
+    </view>
+</view>
+<!-- 管理 -->
+<view class="manages">
+    <view class="manage">
+        <text class="manage-title">我的管理</text>
+        <view class="manage-items">
+            <view class="manage-item" wx:for="{{myManageList}}" wx:key="index">
+                <icon class="iconfont {{item.icon}} manage-img"></icon>
+                <text>{{item.title}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="manage">
+        <text class="manage-title">应用管理</text>
+        <view class="manage-items">
+            <view class="manage-item" wx:for="{{appManageList}}" wx:key="index">
+                <icon class="iconfont {{item.icon}} manage-img"></icon>
+                <text>{{item.title}}</text>
+            </view>
+        </view>
+    </view>
+
 </view>

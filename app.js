@@ -1,17 +1,6 @@
 // app.js
 App({
   onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
 
     //自定义顶部搜索必须设置
     // 启动应用时获取height
@@ -20,6 +9,8 @@ App({
         this.globalData.height = res.statusBarHeight
       }
     })
+    
+    // wx.setStorageSync('userinfo', {username:'jingchao'})
 
     const that = this;
     // 获取系统信息
@@ -40,7 +31,6 @@ App({
   globalData: {
     userInfo: null,
     height: 0,
-
     navBarHeight: 0, // 导航栏高度
     statusBarHeight: 0, // 状态栏高度
     menuRight: 0, // 胶囊距右方间距（方保持左、右间距一致）
