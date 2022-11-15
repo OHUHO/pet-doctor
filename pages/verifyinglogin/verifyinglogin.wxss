@@ -5,32 +5,40 @@
 	height: 100vh;
 	background-color: #fff;
 	border-radius: 0rpx;
-  }
-  .verify .verify-main {
-	margin: 0 auto;
+}
+
+.verify-main {
 	padding-top: 44%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-  }
-  .verify .verify-main .main--title {
+}
+
+.title {
 	color: #444444;
 	font-size: 32rpx;
 	font-weight: 500;
-  }
-  .verify .verify-main .main--desc {
+}
+
+.desc {
 	margin-top: 4rpx;
 	color: #888888;
 	font-size: 28rpx;
 	font-weight: 400;
-  }
-  .verify .verify-main .main--stateImg {
+}
+
+.image {
 	width: 400rpx;
 	height: 320rpx;
 	border-radius: 0rpx;
 	margin-top: 48rpx;
-  }
-  .verify .verify-main .main--ok {
+}
+.btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.ok {
 	width: 400rpx;
 	height: 80rpx;
 	background-color: #F9A7A7;
@@ -40,8 +48,9 @@
 	font-size: 28rpx;
 	font-weight: 400;
 	border: none;
-  }
-  .verify .verify-main .main--cancel {
+}
+
+.cancel {
 	width: 400rpx;
 	height: 80rpx;
 	background-color: #EBECED;
@@ -51,5 +60,4 @@
 	font-weight: 400;
 	margin-top: 24rpx;
 	border: none;
-  }
-  
+}
