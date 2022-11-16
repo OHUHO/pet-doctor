@@ -1,8 +1,7 @@
 // app.js
 App({
+  serverUrl:'http://localhost:8888',
   onLaunch() {
-
-    //自定义顶部搜索必须设置
     // 启动应用时获取height
     wx.getSystemInfo({
       success: (res) => {
@@ -10,7 +9,6 @@ App({
       }
     })
     
-    // wx.setStorageSync('userinfo', {username:'jingchao'})
 
     const that = this;
     // 获取系统信息
@@ -28,6 +26,7 @@ App({
     that.globalData.menuWidth = menuButtonInfo.width;
     that.globalData.windowWidth = systemInfo.windowWidth;
   },
+
   globalData: {
     userInfo: null,
     height: 0,
