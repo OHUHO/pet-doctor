@@ -15,6 +15,8 @@ Page({
     wx.getUserProfile({
       desc: '用于完善你的个人资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
+        console.log(res.userInfo)
+        const userinfo = res.userInfo
         // 登录并将数据传递给服务器
         wx.login({
           success (res) {
@@ -23,13 +25,19 @@ Page({
               //发起网络请求通过code 获取 openid
               wx.request({
                 url: app.serverUrl+"/login",
-                data: {
-                  code: res.code
+                data:{
+                  code: res.code,
+                  username: userinfo.nickName,
+                  portrait:userinfo.avatarUrl
                 },
+                header: {'content-type': 'application/x-www-form-urlencoded'},
                 method:'POST',
                 success(res){
-                  // 将用户信息保存至服务器
-
+                  var userinfo = res.data.data
+                  wx.setStorageSync('userinfo', userinfo)
+                  wx.navigateBack({
+                    url: '1',
+                  })
                 }
               })
             } else {
