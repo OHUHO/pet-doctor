@@ -20,7 +20,7 @@ Page({
         // 登录并将数据传递给服务器
         wx.login({
           success (res) {
-            console.log(res.code)
+            // console.log(res.code)
             if (res.code) {
               //发起网络请求通过code 获取 openid
               wx.request({
@@ -34,6 +34,7 @@ Page({
                 method:'POST',
                 success(res){
                   var userinfo = res.data.data
+                  // console.log(userinfo)
                   wx.setStorageSync('userinfo', userinfo)
                   wx.navigateBack({
                     url: '1',
