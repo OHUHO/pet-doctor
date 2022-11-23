@@ -78,7 +78,8 @@ swiper {
     /* width: 100%; */
     margin-top: 20rpx;
     /* padding: 0 10rpx; */
-    /* margin-bottom: 100rpx; */
+    /* margin-bottom: 444rpx; */
+    padding-bottom: 100rpx;
 }
 
 

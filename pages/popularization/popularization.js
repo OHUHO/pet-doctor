@@ -98,7 +98,7 @@ Page({
         name: '昵称',
         num: '99',
         title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
-        url: '/images/be/1.jpg',
+        url: '/images/pets/pet2.png',
         avatar: '/images/be/6.jpeg'
       },
       {
@@ -106,7 +106,7 @@ Page({
         name: '昵称2',
         num: '99',
         title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
-        url: '/images/be/4.png',
+        url: '/images/pets/pet3.png',
         avatar: '/images/be/8.jpeg'
       },
       {
@@ -114,7 +114,7 @@ Page({
         name: '昵称3',
         num: '99',
         title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
-        url: '/images/be/2.jpg',
+        url: '/images/pets/pet1.png',
         avatar: '/images/be/7.jpeg'
       },
       {
@@ -122,7 +122,7 @@ Page({
         name: '昵称4',
         num: '99',
         title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
-        url: '/images/be/3.jpg',
+        url: '/images/pets/pet5.png',
         avatar: '/images/be/6.jpeg'
       },
       {
@@ -130,7 +130,7 @@ Page({
         name: '昵称5',
         num: '99',
         title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
-        url: '/images/be/6.jpeg',
+        url: '/images/pets/pet6.png',
         avatar: '/images/be/grill.jpeg'
       },
       {
@@ -138,7 +138,7 @@ Page({
         name: '昵称6',
         num: '99',
         title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
-        url: '/images/be/8.jpeg',
+        url: '/images/pets/pet4.png',
         avatar: '/images/be/8.jpeg'
       },
     ]
